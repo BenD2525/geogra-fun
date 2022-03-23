@@ -20,8 +20,17 @@
     
 }
 
-.nav {
-    padding: 0px 75px 0px 75px;;
+.nav li {
+    display: grid;
+}
+
+.nav ul {
+    padding: 0px 75px 0px 75px;
+    list-style-type: none;
+}
+
+.nav li:hover {
+    text-decoration: underline;
 }
 
 .main-section {
