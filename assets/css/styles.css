@@ -56,12 +56,12 @@
     justify-content: space-evenly;
     justify-items: center;
     align-items: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 .main-section p {
     color: #040f16ff;
     background-color: #85baa1ff;
-    font-family: 'Oswald', sans-serif;
     width: 300px;
     text-align: center;
     border-radius: 50px;
@@ -99,6 +99,10 @@ footer {
     color: white;
 }
 
+.socials a :hover {
+    color: red;
+}
+
 #home-content {
     background-color: black;
     height: 600px;
@@ -109,10 +113,42 @@ footer {
 
 button {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 50px;
     color: black;
     font-family:'Lato', sans-serif;
     font-size: xx-large;
     font-weight: bolder;
+    width: 60%;
 }
 
+button a {
+    text-decoration: none;
+    color: #040f16ff;
+}
+
+#score-section {
+    color: white;
+}
+
+#time-section {
+    color: white;
+}
+
+.question {
+    color: white;
+}
+
+.button-box {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: fit-content;
+}
+
+#middle-section {
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+}
