@@ -24,9 +24,26 @@
     display: grid;
 }
 
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+.active {
+    color: #85baa1ff;
+    font-size: 150%;
+}
+
 .nav ul {
     padding: 0px 75px 0px 75px;
     list-style-type: none;
+    display: grid;
+    align-content: center;
+    justify-content: space-between;
+    align-items: start;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
 }
 
 .nav li:hover {
