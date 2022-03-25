@@ -145,10 +145,16 @@ button a {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    width: fit-content;
+    width: 500px;
 }
 
-#middle-section {
+#question-middle-section {
     display: grid;
     grid-template-rows: 33% 33% 33%;
+}
+
+.leaderboard table {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    
 }
