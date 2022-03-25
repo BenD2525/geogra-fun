@@ -9,7 +9,7 @@
 .header-section {
     font-family: Oswald, sans-serif;
     display: grid;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 53% 47%;
     background-color: #040f16ff;
     color: white;
     align-items: center;
@@ -61,8 +61,9 @@
 
 .main-section p {
     color: #040f16ff;
-    background-color: #85baa1ff;
-    width: 300px;
+    background-color: white;
+    width: auto;
+    padding: 20px;
     text-align: center;
     border-radius: 50px;
 }
