@@ -1,14 +1,78 @@
 
-function addEventListener() {
-    let answerbutton = document.getElementsByClassName('answer');
-    answerbutton.addEventListener('click', function() {
-        showCorrectAnswer();
-    });
+ // Question array 
+ const questions = [
+    {
+        question: "The above is the flag of which country?",
+        answer: {
+            1: "China",
+            2: "India",
+            3: "Egypt",
+            4: "Rwanda"
+        },
+        correct: 2
+    },
+    {
+        question: "The above is the flag of which country?",
+        answer: {
+            1: "Argentina",
+            2: "Cameroon",
+            3: "Gabon",
+            4: "Ireland"
+        },
+        correct: 1
+    },
+    {
+        question: "The above is the flag of which country?",
+        answer: {
+            1: "Scotland",
+            2: "Germany",
+            3: "Belgium",
+            4: "Netherlands"
+        },
+        correct: 3
+    },
+    {
+        question: "The above is the flag of which country?",
+        answer: {
+            1: "New Zealand",
+            2: "Australia",
+            3: "Peru",
+            4: "Tonga"
+        },
+        correct: 2
+    },
+    {
+        question: "The above is the flag of which country?",
+        answer: {
+            1: "Spain",
+            2: "Portugal",
+            3: "Greece",
+            4: "Moldova"
+        },
+        correct: 1
+    },
+
+];
+
+function changeQuestion() {
+    questions++
 };
 
-function displayQuestion() {
+function addEventListener() {
+    let answerbutton = document.getElementsByClassName('answer');
+    answerbutton.addEventListener('click', changeQuestion);
+};
 
-    let question = 1
+addEventListener();
+
+function displayQuestion() {
+    let question=1
+    if (question == 1) {
+    document.getElementById('answer-one').innerHTML="questions.answer[0];"
+    }
+};
+
+   /* COMMENTED OUT let question = 1
 
     if (question == 1) {
         document.getElementById('answer-one').innerHTML = "China"
@@ -41,40 +105,40 @@ function displayQuestion() {
         document.getElementById('answer-four').innerHTML = "Moldova"
     }
 };
-
+*/
 displayQuestion();
 
 function Answers() {
     let question = 1
     if (question == 1) {
-        document.getElementById('answer-one') == "wrong"
-        document.getElementById('answer-two') == "right"
-        document.getElementById('answer-two') == "wrong"
-        document.getElementById('answer-two') == "wrong"
+        document.getElementById('answer-one') = "wrong"
+        document.getElementById('answer-two') = "right"
+        document.getElementById('answer-two') = "wrong"
+        document.getElementById('answer-two') = "wrong"
     }
     else if (question == 2) {
-        document.getElementById('answer-one') == "right"
-        document.getElementById('answer-two') == "wrong"
-        document.getElementById('answer-three') == "wrong"
-        document.getElementById('answer-four') == "wrong"
+        document.getElementById('answer-one') = "right"
+        document.getElementById('answer-two') = "wrong"
+        document.getElementById('answer-three') = "wrong"
+        document.getElementById('answer-four') = "wrong"
     }
     else if (question == 3) {
-        document.getElementById('answer-one') == "wrong"
-        document.getElementById('answer-two') == "wrong"
-        document.getElementById('answer-three') == "right"
-        document.getElementById('answer-four') == "wrong"
+        document.getElementById('answer-one') = "wrong"
+        document.getElementById('answer-two') = "wrong"
+        document.getElementById('answer-three') = "right"
+        document.getElementById('answer-four') = "wrong"
     }
     else if (question == 4) {
-        document.getElementById('answer-one') == "wrong"
-        document.getElementById('answer-two') == "right"
-        document.getElementById('answer-three') == "wrong"
-        document.getElementById('answer-four') == "wrong"
+        document.getElementById('answer-one') = "wrong"
+        document.getElementById('answer-two') = "right"
+        document.getElementById('answer-three') = "wrong"
+        document.getElementById('answer-four') = "wrong"
     }
     else if (question == 5) {
-        document.getElementById('answer-one') == "right"
-        document.getElementById('answer-two') == "wrong"
-        document.getElementById('answer-three') == "wrong"
-        document.getElementById('answer-four') == "wrong"
+        document.getElementById('answer-one') = "right"
+        document.getElementById('answer-two') = "wrong"
+        document.getElementById('answer-three') = "wrong"
+        document.getElementById('answer-four') = "wrong"
     }
 
 };
