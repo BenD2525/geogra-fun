@@ -58,9 +58,17 @@ function changeQuestion() {
     questions++
 };
 
+const answerButtons=document.getElementsByClassName('answer');
+
 function addEventListener() {
-    let answerbutton = document.getElementsByClassName('answer');
-    answerbutton.addEventListener('click', changeQuestion);
+    let answerbuttonone = document.getElementById('answer-one');
+    answerbuttonone.addEventListener('click', changeQuestion);
+    let answerbuttontwo = document.getElementById('answer-two');
+    answerbuttontwo.addEventListener('click', changeQuestion);
+    let answerbuttonthree = document.getElementById('answer-three');
+    answerbuttonthree.addEventListener('click', changeQuestion);
+    let answerbuttonfour = document.getElementById('answer-four');
+    answerbuttonfour.addEventListener('click', changeQuestion);
 };
 
 addEventListener();
@@ -68,7 +76,7 @@ addEventListener();
 function displayQuestion() {
     let question=1
     if (question == 1) {
-    document.getElementById('answer-one').innerHTML="questions.answer[0];"
+    document.getElementById('answer-one').innerHTML=questions.answer[0];
     }
 };
 
