@@ -1,5 +1,15 @@
+document.addEventListener("click", function() {
+    let answers= document.getElementsByClassName('answer');
 
- // Question array 
+    for (let answer of answers) {
+        answer.addEventListener("click", showCorrectAnswer());
+        answer.addEventListener("click", changeQuestion());
+    }
+});
+
+
+// Question array
+
  const questions = [
     {
         question: "The above is the flag of which country?",
@@ -55,28 +65,16 @@
 ];
 
 function changeQuestion() {
-    questions++
-};
-
-const answerButtons=document.getElementsByClassName('answer');
-
-function addEventListener() {
-    let answerbuttonone = document.getElementById('answer-one');
-    answerbuttonone.addEventListener('click', changeQuestion);
-    let answerbuttontwo = document.getElementById('answer-two');
-    answerbuttontwo.addEventListener('click', changeQuestion);
-    let answerbuttonthree = document.getElementById('answer-three');
-    answerbuttonthree.addEventListener('click', changeQuestion);
-    let answerbuttonfour = document.getElementById('answer-four');
-    answerbuttonfour.addEventListener('click', changeQuestion);
-};
-
-addEventListener();
+    for (question of questions) {
+        questions++
+}};
 
 function displayQuestion() {
-    let question=1
-    if (question == 1) {
-    document.getElementById('answer-one').innerHTML=questions.answer[0];
+    for (question of questions) {
+    document.getElementById('answer-one').innerHTML= questions[0].answer[1];
+    document.getElementById('answer-two').innerHTML= questions[0].answer[2];
+    document.getElementById('answer-three').innerHTML= questions[0].answer[3];
+    document.getElementById('answer-four').innerHTML= questions[0].answer[4];
     }
 };
 
