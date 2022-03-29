@@ -9,9 +9,9 @@ document.addEventListener("click", function() {
 
 
 // Question array
-
+const flag= document.getElementById("flag-box");
  const questions = [
-    {
+    {   flag: 
         question: "The above is the flag of which country?",
         answer: {
             1: "China",
