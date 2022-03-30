@@ -155,3 +155,8 @@ button a {
     font-family: 'Oswald', sans-serif;
     
 }
+
+#flag-box {
+    width: 200px;
+    height: 133px;
+}

@@ -8,10 +8,15 @@ document.addEventListener("click", function() {
 });
 
 
-// Question array
+//Flag display
 const flag= document.getElementById("flag-box");
+flag.style.backgroundImage="url(assets/images/india-flag-small.png)";
+
+
+// Question array
+
  const questions = [
-    {   flag: 
+    {   
         question: "The above is the flag of which country?",
         answer: {
             1: "China",
@@ -65,9 +70,9 @@ const flag= document.getElementById("flag-box");
 ];
 
 function changeQuestion() {
-    for (question of questions) {
-        questions++
-}};
+    let questionCount= questions[0];
+    questionCount++;
+};
 
 function displayQuestion() {
     for (question of questions) {
