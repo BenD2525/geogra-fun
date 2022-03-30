@@ -101,7 +101,7 @@ footer {
 }
 
 #home-content {
-    background-color: black;
+    background-color: #040f16ff;
     height: 600px;
     display: grid;
     grid-template-columns: repeat(3, 33%);
