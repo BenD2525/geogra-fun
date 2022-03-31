@@ -160,3 +160,8 @@ button a {
     width: 200px;
     height: 133px;
 }
+
+#timer-box {
+    color: white;
+    font-size: 20px;
+}

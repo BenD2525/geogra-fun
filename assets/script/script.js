@@ -8,6 +8,16 @@ document.addEventListener("click", function() {
 });
 
 
+
+let seconds= 0
+setInterval(function timer() {
+    seconds++
+    let minute = Math.floor(seconds / 60);
+    let timer= document.getElementById('timer-box')
+    timer.innerHTML= `Timer: ${minute}:${seconds}`;
+},1000);
+
+
 //Flag display
 const flag= document.getElementById("flag-box");
 flag.style.backgroundImage="url(assets/images/india-flag-small.png)";
