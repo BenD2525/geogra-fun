@@ -9,19 +9,23 @@ document.addEventListener("click", function() {
 
 
 
-let seconds= 0
+let totalSeconds= 0
 setInterval(function timer() {
-    seconds++
-    let minute = Math.floor(seconds / 60);
+    totalSeconds++
+    let minute = Math.floor(totalSeconds / 60);
     let timer= document.getElementById('timer-box')
+    let seconds= totalSeconds - (minute * 60);
     timer.innerHTML= `Timer: ${minute}:${seconds}`;
 },1000);
 
 
 //Flag display
+function displayFlag(){
 const flag= document.getElementById("flag-box");
 flag.style.backgroundImage="url(assets/images/india-flag-small.png)";
+};
 
+displayFlag();
 
 // Question array
 
@@ -30,7 +34,7 @@ flag.style.backgroundImage="url(assets/images/india-flag-small.png)";
         question: "The above is the flag of which country?",
         answer: {
             1: "China",
-            2: "India",
+            2: "India", 
             3: "Egypt",
             4: "Rwanda"
         },
