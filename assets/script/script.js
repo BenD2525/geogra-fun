@@ -3,11 +3,11 @@ document.addEventListener("click", function() {
 
     for (let answer of answers) {
         answer.addEventListener("click", showCorrectAnswer());
-        answer.addEventListener("click", changeQuestion());
+        //answer.addEventListener("click", changeQuestion());
     }
 });
 
-
+// Timer
 
 let totalSeconds= 0
 setInterval(function timer() {
@@ -15,9 +15,18 @@ setInterval(function timer() {
     let minute = Math.floor(totalSeconds / 60);
     let timer= document.getElementById('timer-box')
     let seconds= totalSeconds - (minute * 60);
+        if (seconds < 10) {
+            timer.innerHTML= `Timer: ${minute}:0${seconds}`;
+        }
+        else {
     timer.innerHTML= `Timer: ${minute}:${seconds}`;
+        };
 },1000);
 
+//Score
+
+let score= 0
+document.getElementById('score-section').innerHTML= `Score:${score}/10`;
 
 //Flag display
 function displayFlag(){
@@ -83,9 +92,10 @@ displayFlag();
 
 ];
 
+let currentQuestion= questions[0];
+
 function changeQuestion() {
-    let questionCount= questions[0];
-    questionCount++;
+    currentQuestion++;
 };
 
 function displayQuestion() {
@@ -170,15 +180,17 @@ function Answers() {
 
 Answers();
 
+
 function showCorrectAnswer() {
-
-        let answer= document.getElementById('answer-one')
-
-        if (answer == "right") {
+        
+        if (currentQuestion.answer[1] === "India") {
             alert ('Correct!')
+            currentQuestion++;
         }
-        else if (answer == "wrong") {
+        else if (currentQuestion.answer[1]) {
             alert ('Incorrect Answer!')
+            currentQuestion++;
+            displayQuestion();
         }
 
  };
