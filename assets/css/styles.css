@@ -171,8 +171,28 @@ button a {
 }
 
 @media screen and (max-width: 1030px) {
-    #middle-section img {
-        width: 20px;
+
+    .header-section {
+        font-size: 15px;
     }
     
+    #middle-section img {
+       width: 200px;
+    }
+    .main-section p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    #home-content {
+        display: contents;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .socials ul {
+        display: ;
+    }
 }
