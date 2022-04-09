@@ -7,6 +7,7 @@ document.addEventListener("click", function() {
     }
 });
 
+let score= 0
 // Timer
 
 let totalSeconds= 0
@@ -24,10 +25,11 @@ setInterval(function timer() {
 },1000);
 
 //Score
+function incrementScore() {
+    score++
+};
 
-let score= 0
-document.getElementById('score-section').innerHTML= `Score:${score}/10`;
-
+document.getElementById('score-section').innerText= `Score:${score}/10`;
 //Flag display
 function displayFlag(){
 const flag= document.getElementById("flag-box");
