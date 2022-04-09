@@ -165,3 +165,14 @@ button a {
     color: white;
     font-size: 20px;
 }
+
+#left-section {
+    margin: 5%;
+}
+
+@media screen and (max-width: 1030px) {
+    #middle-section img {
+        width: 20px;
+    }
+    
+}
