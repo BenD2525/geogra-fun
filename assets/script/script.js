@@ -1,4 +1,10 @@
-document.addEventListener("click", function() {
+const flagBox = document.querySelector("#flag-box");
+const question = document.querySelector(".question");
+const buttons = Array.from(document.querySelectorAll(".answer"));
+const score = document.querySelector("#score-section");
+
+
+//document.addEventListener("click", function() {
     let answers= document.getElementsByClassName('answer');
 
     for (let answer of answers) {
