@@ -1,19 +1,14 @@
+//constant variables to be referenced
 const flagBox = document.querySelector("#flag-box");
 const question = document.querySelector(".question");
 const buttons = Array.from(document.querySelectorAll(".answer"));
-const score = document.querySelector("#score-section");
+const scoreEl = document.querySelector("#score-section");
+let questionId;
+let userCanAnswer;
+let currentQuestion;
+let score=0;
+let game;
 
-
-//document.addEventListener("click", function() {
-    let answers= document.getElementsByClassName('answer');
-
-    for (let answer of answers) {
-        answer.addEventListener("click", showCorrectAnswer());
-        //answer.addEventListener("click", changeQuestion());
-    }
-});
-
-let score= 0
 // Timer
 
 let totalSeconds= 0
@@ -29,20 +24,6 @@ setInterval(function timer() {
     timer.innerText= `Timer: ${minute}:${seconds}`;
         };
 },1000);
-
-//Score
-function incrementScore() {
-    score++
-};
-
-document.getElementById('score-section').innerText= `Score:${score}/10`;
-//Flag display
-function displayFlag(){
-const flag= document.getElementById("flag-box");
-flag.style.backgroundImage="url(assets/images/india-flag-small.png)";
-};
-
-displayFlag();
 
 // Question array
 
@@ -110,20 +91,28 @@ displayFlag();
 
 ];
 
-let currentQuestion= questions[0];
+function getCurrentQuestion(id) {
+    return questions.find((q) => q.id === id);
+  };
 
-function changeQuestion() {
-    currentQuestion++;
+function displayQuiz() {
+    userCanAnswer = true;
+    currentQuestion = getCurrentQuestion(questionId);
+    scoreEl.innerText = `Score: ${score}`;
+    question.innerText = currentQuestion.question;
+    flagBox.style.backgroundImage = `url(${currentQuestion.flagUrl})`;
+    buttons.forEach((btn) => {
+      btn.style.backgroundColor = "white";
+      btn.innerText = currentQuestion.answer[btn.value];
+    });
 };
 
-function displayQuestion() {
-    for (question of questions) {
-    document.getElementById('answer-one').innerText= questions[0].answer[1];
-    document.getElementById('answer-two').innerText= questions[0].answer[2];
-    document.getElementById('answer-three').innerText= questions[0].answer[3];
-    document.getElementById('answer-four').innerText= questions[0].answer[4];
-    }
-};
+function startGame() {
+    questionId = 1;
+    displayQuiz();
+  }
+  
+  startGame();
 
    /* COMMENTED OUT let question = 1
 
@@ -159,56 +148,5 @@ function displayQuestion() {
     }
 };
 */
-displayQuestion();
-
-function Answers() {
-    let question = 1
-    if (question == 1) {
-        document.getElementById('answer-one') = "wrong"
-        document.getElementById('answer-two') = "right"
-        document.getElementById('answer-two') = "wrong"
-        document.getElementById('answer-two') = "wrong"
-    }
-    else if (question == 2) {
-        document.getElementById('answer-one') = "right"
-        document.getElementById('answer-two') = "wrong"
-        document.getElementById('answer-three') = "wrong"
-        document.getElementById('answer-four') = "wrong"
-    }
-    else if (question == 3) {
-        document.getElementById('answer-one') = "wrong"
-        document.getElementById('answer-two') = "wrong"
-        document.getElementById('answer-three') = "right"
-        document.getElementById('answer-four') = "wrong"
-    }
-    else if (question == 4) {
-        document.getElementById('answer-one') = "wrong"
-        document.getElementById('answer-two') = "right"
-        document.getElementById('answer-three') = "wrong"
-        document.getElementById('answer-four') = "wrong"
-    }
-    else if (question == 5) {
-        document.getElementById('answer-one') = "right"
-        document.getElementById('answer-two') = "wrong"
-        document.getElementById('answer-three') = "wrong"
-        document.getElementById('answer-four') = "wrong"
-    }
-
-};
-
-Answers();
 
 
-function showCorrectAnswer() {
-        
-        if (currentQuestion.answer[1] === "India") {
-            alert ('Correct!')
-            currentQuestion++;
-        }
-        else if (currentQuestion.answer[1]) {
-            alert ('Incorrect Answer!')
-            currentQuestion++;
-            displayQuestion();
-        }
-
- };
