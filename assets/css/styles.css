@@ -172,6 +172,10 @@ button a {
 
 @media screen and (max-width: 1030px) {
 
+    .nav {
+        display: none;
+    }
+
     .header-section {
         font-size: 15px;
     }
@@ -187,6 +191,10 @@ button a {
 @media screen and (max-width: 690px) {
     #home-content {
         display: contents;
+        color: black;
+    }
+    .main-section {
+        color: black;
     }
 
 }
