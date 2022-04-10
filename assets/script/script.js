@@ -48,6 +48,8 @@ displayFlag();
 
  const questions = [
     {   
+        id: 1,
+        flagUrl: "../assets/images/india-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "China",
@@ -57,7 +59,9 @@ displayFlag();
         },
         correct: 2
     },
-    {
+    {   
+        id: 2,
+        flagUrl: "../assets/images/argentina-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "Argentina",
@@ -67,7 +71,9 @@ displayFlag();
         },
         correct: 1
     },
-    {
+    {   
+        id: 3,
+        flagUrl: "../assets/images/belgium-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "Scotland",
@@ -78,6 +84,8 @@ displayFlag();
         correct: 3
     },
     {
+        id: 4,
+        flagUrl: "../assets/images/australia-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "New Zealand",
@@ -88,6 +96,8 @@ displayFlag();
         correct: 2
     },
     {
+        id: 5,
+        flagUrl: "../assets/images/spain-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "Spain",
