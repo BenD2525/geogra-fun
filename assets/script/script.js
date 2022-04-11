@@ -39,6 +39,7 @@ setInterval(function timer() {
             4: "Rwanda"
         },
         correct: 2
+        next: true
     },
     {   
         id: 2,
@@ -51,6 +52,7 @@ setInterval(function timer() {
             4: "Ireland"
         },
         correct: 1
+        next: true
     },
     {   
         id: 3,
@@ -63,6 +65,7 @@ setInterval(function timer() {
             4: "Netherlands"
         },
         correct: 3
+        next: true
     },
     {
         id: 4,
@@ -75,6 +78,7 @@ setInterval(function timer() {
             4: "Tonga"
         },
         correct: 2
+        next: true
     },
     {
         id: 5,
@@ -87,6 +91,7 @@ setInterval(function timer() {
             4: "Moldova"
         },
         correct: 1
+        next: false
     },
 
 ];
@@ -106,6 +111,22 @@ function displayQuiz() {
       btn.innerText = currentQuestion.answer[btn.value];
     });
 };
+
+// Next Question
+
+function nextQuestion() {
+    if (currentQuestion.next) {
+        questionId++;
+        score += 100;
+        displayQuiz();
+    } else {
+        alert("You've finished!");
+    }
+}
+
+function checkAnswer(buttons) {
+    
+}
 
 function startGame() {
     questionId = 1;
