@@ -117,7 +117,6 @@ function displayQuiz() {
 function nextQuestion() {
     if (currentQuestion.next) {
         questionId++;
-        score += 100;
         displayQuiz();
     } else {
         alert("You've finished!");
@@ -129,6 +128,7 @@ function checkAnswer(e) {
     userCanAnswer = false;
     if (currentQuestion.correct === parseInt(e.value)) {
         e.style.backgroundColor = "green";
+        score += 100;
         setTimeout(() => {
             nextQuestion();
         }, 1000);
