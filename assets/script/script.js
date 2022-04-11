@@ -38,7 +38,7 @@ setInterval(function timer() {
             3: "Egypt",
             4: "Rwanda"
         },
-        correct: 2
+        correct: 2,
         next: true
     },
     {   
@@ -51,7 +51,7 @@ setInterval(function timer() {
             3: "Gabon",
             4: "Ireland"
         },
-        correct: 1
+        correct: 1,
         next: true
     },
     {   
@@ -64,7 +64,7 @@ setInterval(function timer() {
             3: "Belgium",
             4: "Netherlands"
         },
-        correct: 3
+        correct: 3,
         next: true
     },
     {
@@ -77,7 +77,7 @@ setInterval(function timer() {
             3: "Peru",
             4: "Tonga"
         },
-        correct: 2
+        correct: 2,
         next: true
     },
     {
@@ -90,7 +90,7 @@ setInterval(function timer() {
             3: "Greece",
             4: "Moldova"
         },
-        correct: 1
+        correct: 1,
         next: false
     },
 
@@ -124,9 +124,21 @@ function nextQuestion() {
     }
 }
 
-function checkAnswer(buttons) {
-    
-}
+function checkAnswer(e) {
+    if (!userCanAnswer) return;
+    userCanAnswer = false;
+    if (currentQuestion.correct === parseInt(e.value)) {
+        e.style.backgroundColor = "green";
+        setTimeout(() => {
+            nextQuestion();
+        }, 1000);
+    } else {
+        e.style.backgroundColor = "red";
+        setTimeout(() => {
+            nextQuestion();
+          }, 1000);
+    }
+};
 
 function startGame() {
     questionId = 1;
@@ -134,40 +146,5 @@ function startGame() {
   }
   
   startGame();
-
-   /* COMMENTED OUT let question = 1
-
-    if (question == 1) {
-        document.getElementById('answer-one').innerText = "China"
-        document.getElementById('answer-two').innerText = "India"
-        document.getElementById('answer-three').innerText = "Egypt"
-        document.getElementById('answer-four').innerText = "Rwanda"
-    }
-    else if (question == 2) {
-        document.getElementById('answer-one').innerText = "Argentina"
-        document.getElementById('answer-two').innerText = "Cameroon"
-        document.getElementById('answer-three').innerText = "Gabon"
-        document.getElementById('answer-four').innerText = "Ireland"
-    }
-    else if (question == 3) {
-        document.getElementById('answer-one').innerText = "Scotland"
-        document.getElementById('answer-two').innerText = "Germany"
-        document.getElementById('answer-three').innerText = "Belgium"
-        document.getElementById('answer-four').innerText = "Netherlands"
-    }
-    else if (question == 4) {
-        document.getElementById('answer-one').innerText = "New Zealand"
-        document.getElementById('answer-two').innerText = "Australia"
-        document.getElementById('answer-three').innerText = "Peru"
-        document.getElementById('answer-four').innerText = "Tonga"
-    }
-    else if (question == 5) {
-        document.getElementById('answer-one').innerText = "Spain"
-        document.getElementById('answer-two').innerText = "Portugal"
-        document.getElementById('answer-three').innerText = "Greece"
-        document.getElementById('answer-four').innerText = "Moldova"
-    }
-};
-*/
 
 
