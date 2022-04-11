@@ -123,17 +123,29 @@ function nextQuestion() {
     }
 }
 
+function myPlayGood(){
+    var audio = new Audio("assets/audio/607207__fupicat__congrats.wav");
+    audio.play();
+}
+
+function myPlayBad(){
+    var audio = new Audio("assets/audio/333393__jayfrosting__boo-5-only-a-couple-people.wav");
+    audio.play();
+}
+
 function checkAnswer(e) {
     if (!userCanAnswer) return;
     userCanAnswer = false;
     if (currentQuestion.correct === parseInt(e.value)) {
         e.style.backgroundColor = "green";
+        myPlayGood();
         score += 100;
         setTimeout(() => {
             nextQuestion();
         }, 1000);
     } else {
         e.style.backgroundColor = "red";
+        myPlayBad();
         setTimeout(() => {
             nextQuestion();
           }, 1000);
@@ -143,7 +155,7 @@ function checkAnswer(e) {
 function startGame() {
     questionId = 1;
     displayQuiz();
-  }
+  };
   
   startGame();
 
