@@ -3,6 +3,8 @@ const flagBox = document.querySelector("#flag-box");
 const question = document.querySelector(".question");
 const buttons = Array.from(document.querySelectorAll(".answer"));
 const scoreEl = document.querySelector("#score-section");
+const menuToggle = document.querySelector(".toggle");
+const navBar = document.querySelectorAll(".nav");
 let questionId;
 let userCanAnswer;
 let currentQuestion;
@@ -10,20 +12,22 @@ let score = 0;
 let game;
 
 // Burger Menu
-const menuToggle = document.querySelectorAll(".toggle");
+
 const navIsOpen = function() {
-    if (menuToggle.classList == ".nav-open") {
+    if (menuToggle.classList.contains (".nav-open")) {
         return true;
     }
     else {
         return false;
     }
 };
-const openNav = function() {
-    Element.classList.add(".nav-open");
+const openNav = () => {
+    menuToggle.classList.add(".nav-open");
+    menuToggle.classList.remove(".nav");
 };
-const closeNav = function() {
-    Element.classList.remove(".nav-open");
+const closeNav = () => {
+    menuToggle.classList.remove(".nav-open");
+    menuToggle.classList.add(".nav");
 };
 
 //Displays burger menu
