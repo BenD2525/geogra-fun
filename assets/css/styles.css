@@ -172,6 +172,11 @@ button a {
 
 @media screen and (max-width: 1030px) {
 
+    .wrapper {
+        display: initial;
+        align-items: stretch;
+    }
+    
     .nav {
         display: none;
     }
@@ -200,7 +205,4 @@ button a {
 }
 
 @media screen and (max-width: 420px) {
-    .socials ul {
-        display: ;
-    }
 }

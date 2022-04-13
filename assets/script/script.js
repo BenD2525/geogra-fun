@@ -6,8 +6,30 @@ const scoreEl = document.querySelector("#score-section");
 let questionId;
 let userCanAnswer;
 let currentQuestion;
-let score=0;
+let score = 0;
 let game;
+
+// Burger Menu
+const menuToggle = document.querySelectorAll(".toggle");
+const navIsOpen = function() {
+    if (menuToggle.classList == ".nav-open") {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+const openNav = function() {
+    Element.classList.add(".nav-open");
+};
+const closeNav = function() {
+    Element.classList.remove(".nav-open");
+};
+
+//Displays burger menu
+function displayMenu() {
+    navIsOpen() ? closeNav() : openNav();
+};
 
 // Timer
 
