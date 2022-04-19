@@ -3,7 +3,7 @@ const flagBox = document.querySelector("#flag-box");
 const question = document.querySelector(".question");
 const buttons = Array.from(document.querySelectorAll(".answer"));
 const scoreEl = document.querySelector("#score-section");
-const menuToggle = document.querySelector(".toggle");
+const wrapper = document.querySelector(".wrapper");
 const navBar = document.querySelectorAll(".nav");
 let questionId;
 let userCanAnswer;
@@ -14,7 +14,7 @@ let game;
 // Burger Menu
 
 const navIsOpen = function() {
-    if (menuToggle.classList.contains (".nav-open")) {
+    if (wrapper.classList.contains (".nav-open")) {
         return true;
     }
     else {
@@ -22,12 +22,12 @@ const navIsOpen = function() {
     }
 };
 const openNav = () => {
-    menuToggle.classList.add(".nav-open");
-    menuToggle.classList.remove(".nav");
+    wrapper.classList.add(".nav-open");
+    wrapper.classList.remove(".nav");
 };
 const closeNav = () => {
-    menuToggle.classList.remove(".nav-open");
-    menuToggle.classList.add(".nav");
+    wrapper.classList.remove(".nav-open");
+    wrapper.classList.add(".nav");
 };
 
 //Displays burger menu
