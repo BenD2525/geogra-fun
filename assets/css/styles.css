@@ -9,7 +9,7 @@
 .header-section {
     font-family: Oswald, sans-serif;
     display: grid;
-    grid-template-columns: 53% 47%;
+    grid-template-columns: 55% 45%;
     background-color: #040f16ff;
     color: white;
     align-items: center;
@@ -170,17 +170,24 @@ button a {
     margin: 5%;
 }
 
-.nav {
+.nav-close {
     display: none;
 }
 
 .nav-open {
     display: block;
-    background-color: red;
 }
 
 .toggle {
     margin: 20px;
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+.toggle {
+    display: none;
 }
 
 @media screen and (max-width: 1030px) {
@@ -195,7 +202,16 @@ button a {
     .main-section p {
         font-size: 15px;
     }
+
+    .toggle {
+        display: block;
+    }
+
+    .nav {
+    }
+
 }
+
 
 @media screen and (max-width: 690px) {
     #home-content {

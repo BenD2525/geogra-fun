@@ -14,7 +14,7 @@ let game;
 // Burger Menu
 
 const navIsOpen = function() {
-    if (wrapper.classList.contains (".nav-open")) {
+    if (wrapper.classList.contains ("nav-open")) {
         return true;
     }
     else {
@@ -22,12 +22,12 @@ const navIsOpen = function() {
     }
 };
 const openNav = () => {
-    wrapper.classList.add(".nav-open");
-    wrapper.classList.remove(".nav");
+    wrapper.classList.add("nav-open");
+    wrapper.classList.remove("nav-close");
 };
 const closeNav = () => {
-    wrapper.classList.remove(".nav-open");
-    wrapper.classList.add(".nav");
+    wrapper.classList.remove("nav-open");
+    wrapper.classList.add("nav-close");
 };
 
 //Displays burger menu
