@@ -170,21 +170,20 @@ button a {
     margin: 5%;
 }
 
+.nav {
+    display: none;
+}
+
+.nav-open {
+    display: block;
+    background-color: red;
+}
+
+.toggle {
+    margin: 20px;
+}
+
 @media screen and (max-width: 1030px) {
-
-    .wrapper {
-        display: initial;
-        align-items: stretch;
-    }
-    
-    .nav {
-        display: none;
-    }
-
-    .nav-open {
-        position: absolute;
-        display: block;
-    }
 
     .header-section {
         font-size: 15px;
