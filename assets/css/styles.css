@@ -116,6 +116,7 @@ button {
     font-size: xx-large;
     font-weight: bolder;
     width: 60%;
+    padding: 10px;
 }
 
 button a {
@@ -190,6 +191,41 @@ button:hover {
     display: none;
 }
 
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal-header {
+    text-align: center;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white .5;
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
 @media screen and (max-width: 1030px) {
 
     .header-section {
@@ -205,9 +241,6 @@ button:hover {
 
     .toggle {
         display: block;
-    }
-
-    .nav {
     }
 
 }
