@@ -116,7 +116,6 @@ button {
     font-size: xx-large;
     font-weight: bolder;
     width: 60%;
-    padding: 10px;
 }
 
 button a {
@@ -195,17 +194,29 @@ button:hover {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     z-index: 5;
     border: 1px solid;
     border-radius: 20px;
     background-color: white;
     width: 500px;
     max-width: 80%;
+    transition: 200ms ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .modal-header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
 }
 
 #overlay {
@@ -217,6 +228,7 @@ button:hover {
     bottom: 0;
     background-color: white .5;
     pointer-events: none;
+    transition: 200ms ease-in-out;
 }
 
 #overlay.active {
@@ -224,7 +236,9 @@ button:hover {
     pointer-events: all;
 }
 
-
+.close-button {
+    border: none;
+}
 
 @media screen and (max-width: 1030px) {
 
