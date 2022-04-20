@@ -13,10 +13,10 @@ let userCanAnswer;
 let currentQuestion;
 let score = 0;
 let game;
-
+/*
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal= document.querySelector(button.dataset.modalTarget)
+        const modal= document.querySelector(button.dataset.modalTarget);
         openModal(modal)
     })
 });
@@ -24,13 +24,13 @@ openModalButtons.forEach(button => {
 overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll('.modal.active')
     modals.forEach(modal => {
-        closeModal
+        closeModal(modal)
     }) 
-})
+});
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal= button.closest('modal')
+        const modal= button.closest('.modal');
         closeModal(modal)
     })
 });
@@ -46,7 +46,7 @@ function closeModal(modal) {
     modal.classList.remove('active')
     overlay.classList.remove('active')
 };
-
+*/
 // Burger Menu
 
 const navIsOpen = function() {

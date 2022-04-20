@@ -209,9 +209,10 @@ button:hover {
 }
 
 .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    justify-items: center;
+    justify-content: space-evenly;
 }
 
 .modal-header .close-button {
@@ -226,14 +227,14 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: white .5;
     pointer-events: none;
     transition: 200ms ease-in-out;
 }
 
 #overlay.active {
-    opacity: 1;
+    opacity: .5;
     pointer-events: all;
+    background-color: white;
 }
 
 .close-button {
