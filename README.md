@@ -159,8 +159,8 @@ The live link can be found here - []()
 
 ## Content
 
-The code for the timer was created using the information gathered in this article from W3 schools:[W3Schools](https://www.w3schools.com/jsref/met_win_setinterval.asp)
-
+* The code for the timer was created using the information gathered in this article from W3 schools:[W3Schools](https://www.w3schools.com/jsref/met_win_setinterval.asp)
+* The code for the modals was created using this walkthrough from Web Dev Simplified: [Web Dev Simplified](https://www.youtube.com/watch?v=MBaw_6cPmAw&t=182s)
 * All icons (Social icons and icons on home.html) were taken from Font Awesome: [FontAwesome](https://fontawesome.com/)
 * All fonts were taken from Google Fonts: [Google Fonts](https://fonts.google.com/)
 * Color Scheme (Commented at the top of CSS file) was taken from: [Coolors](https://coolors.co/)
