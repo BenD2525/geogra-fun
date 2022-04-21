@@ -1,5 +1,5 @@
 //constant variables to be referenced
-const flagBox = document.querySelector("#flag-box");
+const questionBox = document.querySelector("#question-box");
 const question = document.querySelector(".question");
 const buttons = Array.from(document.querySelectorAll(".answer"));
 const scoreEl = document.querySelector("#score-section");
@@ -222,6 +222,139 @@ setInterval(function timer() {
     },
 ];
 
+const capitalQuestions = [
+    {   
+        id: 1,
+        capital: "Kyiv",
+        question: "The above is the capital of which country?",
+        answer: {
+            1: "Turkey",
+            2: "Ukraine", 
+            3: "Luxembourg",
+            4: "Jordan"
+        },
+        correct: 2,
+        next: true
+    },
+    {   
+        id: 2,
+        capital: "Talinn",
+        question: "The above is the capital of which country?",
+        answer: {
+            1: "Estonia",
+            2: "Latvia",
+            3: "Macedonia",
+            4: "Slovakia"
+        },
+        correct: 1,
+        next: true
+    },
+    {   
+        id: 3,
+        capital: "Lisbon",
+        question: "The above is the capital of which country?",
+        answer: {
+            1: "Greece",
+            2: "Fiji",
+            3: "Spain",
+            4: "Portugal"
+        },
+        correct: 4,
+        next: true
+    },
+    {
+        id: 4,
+        capital: "Seoul",
+        question: "The above is the capital of which country?",
+        answer: {
+            1: "South Korea",
+            2: "China",
+            3: "North Korea",
+            4: "Japan"
+        },
+        correct: 1,
+        next: true
+    },
+    {
+        id: 5,
+        capital: "Cairo",
+        question: "The above is the capital of which country?",
+        answer: {
+            1: "Eqypt",
+            2: "Algeria",
+            3: "Peru",
+            4: "Chile"
+        },
+        correct: 1,
+        next: true
+    },
+    {
+        id: 6,
+        capital: "Budapest",
+        question: "The above is the capital of which country?",
+        answer: {
+            1: "Russia",
+            2: "Romania",
+            3: "Hungary",
+            4: "Slovenia"
+        },
+        correct: 3,
+        next: true
+    },
+    {
+        id: 7,
+        capital: "Tel-Aviv",
+        question: "The above is the capital of which country?",
+        answer: {
+                1: "Madagascar",
+                2: "Croatia",
+                3: "Palestine",
+                4: "Israel"
+            },
+        correct: 4,
+        next: true
+        },
+    {
+        id: 8,
+        capital: "Cardiff",
+        question: "The above is the capital of which country?",
+        answer: {
+                    1: "Ireland",
+                    2: "Wales",
+                    3: "Scotland",
+                    4: "Canada"
+                },
+        correct: 2,
+        next: true
+            },
+    {
+        id: 9,
+        capital: "Wellington",
+        question: "The above is the capital of which country?",
+        answer: {
+                    1: "New Zealand",
+                    2: "Australia",
+                    3: "Cook Islands",
+                    4: "South Africa"
+                    },
+        correct: 1,
+        next: true
+            },
+    {
+        id: 10,
+        capital: "Antananarivo",
+        question: "The above is the capital of which country?",
+        answer: {
+                    1: "Madagascar",
+                    2: "Chad",
+                    3: "Mali",
+                    4: "Bolivia"
+                    },
+        correct: 1,
+        next: false
+    },
+];
+
 function getCurrentQuestion(id) {
     return questions.find((q) => q.id === id);
   };
@@ -231,7 +364,7 @@ function displayQuiz() {
     currentQuestion = getCurrentQuestion(questionId);
     scoreEl.innerText = `Score: ${score}`;
     question.innerText = currentQuestion.question;
-    flagBox.style.backgroundImage = `url(${currentQuestion.flagUrl})`;
+    questionBox.style.backgroundImage = `url(${currentQuestion.flagUrl})`;
     buttons.forEach((btn) => {
       btn.style.backgroundColor = "white";
       btn.innerText = currentQuestion.answer[btn.value];

@@ -89,12 +89,6 @@ The link for Balsamiq is here: [Balsamiq](https://www.balsamiq.com/)
 # Features
 Below is a list of features which are included in this website:
 
-## Header Icon
-
-This icon is located to the left of the nav bar at the top of every page. The icon serves as a continuous theme throughout the website. It is a memorable 'stamp' which shows a globe that signifies the purpose of the website.
-
-![Header icon]( "Screenshot of Header icon")
-
 ## Navigation Bar
 
 This is at the top of each page below the title. It has links to each other page in the website other than the quiz itself, and it is set up to highlight the active page in green text, to show the user which page they are on. When hovering over another option, the option will become underlined, as per standard website conventions. These features allows the user to easily navigate through the website, and know which page they are on.

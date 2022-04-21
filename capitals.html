@@ -20,32 +20,34 @@
     <div class="header-section">
     <!-- Title -->
         <div class="title-section">
-            <h1>Geografun</h1>
+            <h1>Flags of the world</h1>
         </div>
     <!-- Nav -->
-    <div class="wrapper">
         <div class="nav">
             <ul>
-                <li class="active">Home</li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li> <a href="about-us.html">About Us</a></li>
             <ul>
         </div>
     </div>
-    <button class="toggle" onclick="displayMenu()"><i class="fa-solid fa-bars"></i></button>
-    </div>
 <section id="home-content">
-    <div id="left-section" class="main-section">
-        <button> <a href="flags.html">Flags</a></button>
-        <p>Test your knowledge of flags</p>
+    <div id="score-section" class="main-section">
+        
     </div>
-    <div id="middle-section" class="main-section">
-        <img src="assets/images/earth.jpg" alt="picture of the Earth">
+    <div id="question-middle-section" class="main-section">
+        <div id="question-box"></div>
+        <div class="question" id="capital-question"></div>
+        <div class="button-box">
+            <button class="answer" value="1" onclick="checkAnswer(this)"></button>
+            <button class="answer" value="2" onclick="checkAnswer(this)"></button>
+            <button class="answer" value="3" onclick="checkAnswer(this)"></button>
+            <button class="answer" value="4" onclick="checkAnswer(this)"></button>
+        </div>
     </div>
-    <div id="right-section" class="main-section">
-        <button>  <a href="capitals.html">Capitals</a></button>
-        <i class="fa-solid fa-house"></i>
-        <p>Or try your hand at guessing capital cities</p>
+    <div id="time-section" class="main-section">
+        <div id="timer-box">
+        </div>
     </div>
 </section>
     <footer>

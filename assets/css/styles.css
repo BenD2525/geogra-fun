@@ -123,6 +123,10 @@ button a {
     color: #040f16ff;
 }
 
+.answer {
+    width: 200px;
+}
+
 #score-section {
     color: white;
 }
@@ -155,7 +159,7 @@ button a {
     font-family: 'Oswald', sans-serif;   
 }
 
-#flag-box {
+#question-box {
     width: 200px;
     height: 133px;
 }
