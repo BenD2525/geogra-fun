@@ -11,6 +11,7 @@ const navBar = document.querySelectorAll(".nav");
 const openModalButtons= document.querySelectorAll('[data-modal-target]');
 const closeModalButtons= document.querySelectorAll('[data-close-button]');
 const overlay= document.getElementById('overlay');
+const gameType = document.getElementById('capitals')
 let questionId;
 let userCanAnswer;
 let currentQuestion;
@@ -90,8 +91,11 @@ setInterval(function timer() {
 
 //Retrieves question from array
 function getCurrentQuestion(id) {
+    if (gameType) {
+    return capitalQuestions.find((q) => q.id === id);   
+    } else { 
     return questions.find((q) => q.id === id);
-  };
+  }};
 
 //Displays quiz
 function displayQuiz() {
@@ -99,7 +103,11 @@ function displayQuiz() {
     currentQuestion = getCurrentQuestion(questionId);
     scoreEl.innerText = `Score: ${score}`;
     question.innerText = currentQuestion.question;
+    if (gameType) {
+        questionBox.innerText= currentQuestion.capital;
+    } else {
     questionBox.style.backgroundImage = `url(${currentQuestion.flagUrl})`;
+    }
     buttons.forEach((btn) => {
       btn.style.backgroundColor = "white";
       btn.innerText = currentQuestion.answer[btn.value];
@@ -120,13 +128,13 @@ function nextQuestion() {
 function myPlayGood(){
     var audio = new Audio("assets/audio/607207__fupicat__congrats.wav");
     audio.play();
-}
+};
 
 // Plays sound when incorrect
 function myPlayBad(){
     var audio = new Audio("assets/audio/333393__jayfrosting__boo-5-only-a-couple-people.wav");
     audio.play();
-}
+};
 
 //Checks whether answer is correct and applies styling/audio/increments score and question
 function checkAnswer(e) {
