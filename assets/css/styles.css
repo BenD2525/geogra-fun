@@ -163,6 +163,9 @@ button a {
     width: 200px;
     height: 133px;
     color: white;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Oswald';
 }
 
 #timer-box {
@@ -276,5 +279,13 @@ button:hover {
 
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 410px) {
+    .socials ul {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    h4 {
+        padding-top: 50px;
+    }
 }

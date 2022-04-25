@@ -114,6 +114,7 @@ function displayQuiz() {
     });
 };
 
+
 // Next Question
 function nextQuestion() {
     if (currentQuestion.next) {
@@ -121,6 +122,7 @@ function nextQuestion() {
         displayQuiz();
     } else {
         alert("You've finished!");
+        displayLeaderboard();
     }
 };
 
@@ -135,6 +137,7 @@ function myPlayBad(){
     var audio = new Audio("assets/audio/333393__jayfrosting__boo-5-only-a-couple-people.wav");
     audio.play();
 };
+
 
 //Checks whether answer is correct and applies styling/audio/increments score and question
 function checkAnswer(e) {
@@ -163,5 +166,17 @@ function startGame() {
   };
   
   startGame();
+
+  function displayLeaderboard() {
+      let name = prompt ('What is your name?');
+      sessionStorage.setItem('name', name)
+      sessionStorage.setItem('score', score)
+      updateLeaderboard();
+  };
+
+  function updateLeaderboard() {
+      let leaderboard= document.getElementById('leaderboard')
+      leaderboard.innerText = `${sessionStorage.getItem('name')}, ${sessionStorage.getItem('score')}`
+  };
 
 
