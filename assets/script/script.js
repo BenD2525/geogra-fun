@@ -3,6 +3,7 @@ import {questions, capitalQuestions} from "./questions.js"
 
 //constant variables to be referenced
 const questionBox = document.querySelector("#question-box");
+const answers = Array.from(document.getElementsByClassName("answer"))
 const question = document.querySelector(".question");
 const buttons = Array.from(document.querySelectorAll(".answer"));
 const scoreEl = document.querySelector("#score-section");
@@ -11,12 +12,13 @@ const navBar = document.querySelectorAll(".nav");
 const openModalButtons= document.querySelectorAll('[data-modal-target]');
 const closeModalButtons= document.querySelectorAll('[data-close-button]');
 const overlay= document.getElementById('overlay');
-const gameType = document.getElementById('capitals')
+const gameType = document.getElementById('capitals');
 let questionId;
 let userCanAnswer;
 let currentQuestion;
 let score = 0;
 let game;
+
 /*
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -140,24 +142,26 @@ function myPlayBad(){
 
 
 //Checks whether answer is correct and applies styling/audio/increments score and question
-function checkAnswer(e) {
-    if (!userCanAnswer) return;
-    userCanAnswer = false;
-    if (currentQuestion.correct === parseInt(e.value)) {
-        e.style.backgroundColor = "green";
-        myPlayGood();
-        score += 100;
-        setTimeout(() => {
-            nextQuestion();
-        }, 1000);
-    } else {
-        e.style.backgroundColor = "red";
-        myPlayBad();
-        setTimeout(() => {
-            nextQuestion();
-          }, 1000);
-    }
-};
+answers.forEach(answer => (
+    answer.addEventListener('click', function(e) {
+        if (!userCanAnswer) return;
+        userCanAnswer = false;
+        if (currentQuestion.correct === parseInt(e.target.value)) {
+            this.style.backgroundColor = "green";
+            myPlayGood();
+            score += 100;
+            setTimeout(() => {
+                nextQuestion();
+            }, 1000);
+        } else {
+            this.style.backgroundColor = "red";
+            myPlayBad();
+            setTimeout(() => {
+                nextQuestion();
+            }, 1000);
+        }
+    })
+))
 
 //Starts game
 function startGame() {
@@ -175,7 +179,7 @@ function startGame() {
   };
 
   function updateLeaderboard() {
-      let leaderboard= document.getElementById('leaderboard')
+      let leaderboard= document.getElementById('leaderboard');
       leaderboard.innerText = `${sessionStorage.getItem('name')}, ${sessionStorage.getItem('score')}`
   };
 
