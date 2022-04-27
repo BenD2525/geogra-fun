@@ -1,9 +1,9 @@
 //Import question arrays
-import {questions, capitalQuestions} from "./questions.js"
+import {questions, capitalQuestions} from "./questions.js";
 
 //constant variables to be referenced
 const questionBox = document.querySelector("#question-box");
-const answers = Array.from(document.getElementsByClassName("answer"))
+const answers = Array.from(document.getElementsByClassName("answer"));
 const question = document.querySelector(".question");
 const buttons = Array.from(document.querySelectorAll(".answer"));
 const scoreEl = document.querySelector("#score-section");
@@ -13,6 +13,7 @@ const openModalButtons= document.querySelectorAll('[data-modal-target]');
 const closeModalButtons= document.querySelectorAll('[data-close-button]');
 const overlay= document.getElementById('overlay');
 const gameType = document.getElementById('capitals');
+const modalButtons = Array.from(document.querySelectorAll(".modal-button"));
 let questionId;
 let userCanAnswer;
 let currentQuestion;
@@ -20,9 +21,8 @@ let score = 0;
 let game;
 
 /*
-openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal= document.querySelector(button.dataset.modalTarget);
+modalButtons.forEach(button => {
+    modalButtons.addEventListener('click', () => {
         openModal(modal)
     })
 });
@@ -51,8 +51,8 @@ function closeModal(modal) {
     if (modal == null) return
     modal.classList.remove('active')
     overlay.classList.remove('active')
-};*/
-
+};
+*/
 // Burger Menu
 const navIsOpen = function() {
     if (wrapper.classList.contains ("nav-open")) {

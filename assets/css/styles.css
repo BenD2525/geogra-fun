@@ -127,15 +127,7 @@ button a {
     width: 200px;
 }
 
-#score-section {
-    color: white;
-}
-
-#time-section {
-    color: white;
-}
-
-.question {
+.main-section {
     color: white;
 }
 
@@ -164,8 +156,12 @@ button a {
     height: 133px;
     color: white;
     text-align: center;
-    font-size: 100px;
+    font-size: 50px;
     font-family: 'Oswald';
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #timer-box {
@@ -272,10 +268,15 @@ button:hover {
         right: 0;
         width: 100px;
     }
+
+    .wrapper {
+        display: none;
+    }
 }
 
 
 @media screen and (max-width: 690px) {
+
     #home-content {
         display: contents;
         color: black;
@@ -293,6 +294,33 @@ button:hover {
     button a {
         color: white;
     }
+
+    .button-box button {
+        font-size: large;
+        color: black;
+        width: 150px;
+    }
+
+    .socials {
+        height: 250px;
+        font-size: 10px;
+    }
+
+    .title-section {
+        font-size: 15px;
+    }
+
+    #score-section, #time-section {
+        display: block;
+    }
+
+    #timer-box {
+        height: 50px;
+        color: black;
+        margin-top: 20px;
+        display: inline;
+    }
+
 }
 
 @media screen and (max-width: 410px) {
