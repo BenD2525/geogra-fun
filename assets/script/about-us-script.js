@@ -31,11 +31,9 @@ closeModalButtons.forEach(button => {
 
 function openModal(modal) {
     modal= modal.nextElementSibling
-    console.log(modal)
     if (modal == null) return
     modal.classList.add('active')
     overlay.classList.add('active')
-    console.log(modal.classList);
 };
 
 function closeModal(modal) {
