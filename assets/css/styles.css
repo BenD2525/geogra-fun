@@ -152,7 +152,11 @@ button a {
 
 .leaderboard table {
     color: white;
-    font-family: 'Oswald', sans-serif;   
+    font-family: 'Oswald', sans-serif; 
+}
+
+.leaderboard-box {
+    display: block;
 }
 
 #question-box {
@@ -218,6 +222,7 @@ button:hover {
 
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
+    font-size: 20px;
 }
 
 .modal-header {
@@ -225,6 +230,7 @@ button:hover {
     grid-template-columns: 80% 20%;
     justify-items: center;
     justify-content: space-evenly;
+    color: black;
 }
 
 .modal-header .close-button {
