@@ -116,6 +116,8 @@ button {
     font-size: xx-large;
     font-weight: bolder;
     width: 60%;
+    box-shadow: 0px 0px 2px 2px white;
+    border: none;
 }
 
 button a {
@@ -125,6 +127,7 @@ button a {
 
 .answer {
     width: 200px;
+    margin: 10px;
 }
 
 .main-section {
@@ -188,6 +191,11 @@ button a {
 
 button:hover {
     cursor:pointer;
+    background-color: #85baa1ff;
+}
+
+.answer:hover {
+    background-color: #85baa1ff;
 }
 
 .toggle {
