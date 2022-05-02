@@ -150,13 +150,25 @@ button a {
     grid-template-rows: 33% 33% 33%;
 }
 
+#leaderboard-content {
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+}
+
 .leaderboard table {
     color: white;
     font-family: 'Oswald', sans-serif; 
 }
 
-.leaderboard-box {
-    display: block;
+#leaderboard th {
+    padding: 10px;
+}
+
+#leaderboard tr {
+    text-align: center;
 }
 
 #question-box {
