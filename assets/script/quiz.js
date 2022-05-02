@@ -15,6 +15,8 @@ let userCanAnswer;
 let currentQuestion;
 let score = 0;
 let game;
+let timer= document.getElementById('timer-box');
+
 
 // Burger Menu
 const navIsOpen = function() {
@@ -135,15 +137,11 @@ function startGame() {
   startGame();
 
   function displayLeaderboard() {
-      let name = prompt ('What is your name?');
-      sessionStorage.setItem('name', name)
-      sessionStorage.setItem('score', score)
-      updateLeaderboard();
-  };
-
-  function updateLeaderboard() {
-      let leaderboard= document.getElementById('leaderboard');
-      leaderboard.innerText = `${sessionStorage.getItem('name')}, ${sessionStorage.getItem('score')}`
-  };
+    let name = prompt ('What is your name?');
+    window.localStorage.setItem('name', name)
+    window.localStorage.setItem('score', score)
+    window.localStorage.setItem('time', timer.innerText)
+    updateLeaderboard();
+};
 
 

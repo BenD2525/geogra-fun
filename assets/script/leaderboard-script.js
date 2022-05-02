@@ -40,16 +40,15 @@ function displayMenu() {
     navIsOpen() ? closeNav() : openNav();
 };
 
-  function displayLeaderboard() {
-      let name = prompt ('What is your name?');
-      sessionStorage.setItem('name', name)
-      sessionStorage.setItem('score', score)
-      updateLeaderboard();
+  function updateLeaderboard() {
+      let leaderboardName = document.getElementById('l-name');
+      let leaderboardScore = document.getElementById('l-score');
+      let leaderboardTime = document.getElementById('l-time');
+      leaderboardName.innerText = `${localStorage.getItem('name')}`
+      leaderboardScore.innerText = `${localStorage.getItem('score')}`
+      leaderboardTime.innerText = `${localStorage.getItem('time')}`
   };
 
-  function updateLeaderboard() {
-      let leaderboard= document.getElementById('leaderboard');
-      leaderboard.innerText = `${sessionStorage.getItem('name')}, ${sessionStorage.getItem('score')}`
-  };
+  updateLeaderboard();
 
 
