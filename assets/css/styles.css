@@ -158,17 +158,9 @@ button a {
     height: 500px;
 }
 
-.leaderboard table {
+#leaderboard  {
     color: white;
     font-family: 'Oswald', sans-serif; 
-}
-
-#leaderboard th {
-    padding: 10px;
-}
-
-#leaderboard tr {
-    text-align: center;
 }
 
 #question-box {
