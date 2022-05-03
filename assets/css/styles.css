@@ -111,10 +111,13 @@ footer {
 .quiz-button {
     background-color: black;
     border: none;
+    font-size: medium;
+    width: fit-content;
 }
 
 .quiz-button a {
     color: white;
+    font-size: 40px;
 }
 
 button {
