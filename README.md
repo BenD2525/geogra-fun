@@ -155,15 +155,16 @@ The live link can be found here - []()
 
 * The code for the timer was created using the information gathered in this article from W3 schools:[W3Schools](https://www.w3schools.com/jsref/met_win_setinterval.asp)
 * The code for the modals was created using this walkthrough from Web Dev Simplified: [Web Dev Simplified](https://www.youtube.com/watch?v=MBaw_6cPmAw&t=182s)
-* All icons (Social icons and icons on home.html) were taken from Font Awesome: [FontAwesome](https://fontawesome.com/)
 * All fonts were taken from Google Fonts: [Google Fonts](https://fonts.google.com/)
-* Color Scheme (Commented at the top of CSS file) was taken from: [Coolors](https://coolors.co/)
 
 ## Media
 
 All media taken from other websites is listed below:
 
+- Favicon was taken from [Icons8](https://icons8.com/icons/set/favicon)
 - Flag images were taken from [Country Flags](https://www.countryflags.com/image-overview/)
 - Earth image was taken from [Unspash](https://unsplash.com/photos/vhSz50AaFAs)
 - Background image was taken from [Unsplash](https://unsplash.com/photos/Ef6iL87-vOA)
+- Flag image was taken from [Unsplash](https://unsplash.com/photos/hBb9yB3zZ5s)
+- Capitals image was taken from [Unsplash](https://unsplash.com/photos/7_WyzplsaSE)
 - Audio was taken from [Freesound](https://freesound.org/)
