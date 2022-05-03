@@ -109,13 +109,14 @@ footer {
 }
 
 .quiz-button {
-    background-color: black;
+    background: rgba(0, 0, 0, .4);
     border: none;
     font-size: medium;
     width: fit-content;
 }
 
 .quiz-button a {
+    background: rgba(0, 0, 0, .4);
     color: white;
     font-size: 40px;
 }
