@@ -165,4 +165,5 @@ All media taken from other websites is listed below:
 
 - Flag images were taken from [Country Flags](https://www.countryflags.com/image-overview/)
 - Earth image was taken from [Unspash](https://unsplash.com/photos/vhSz50AaFAs)
+- Background image was taken from [Unsplash](https://unsplash.com/photos/Ef6iL87-vOA)
 - Audio was taken from [Freesound](https://freesound.org/)

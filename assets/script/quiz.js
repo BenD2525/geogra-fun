@@ -138,9 +138,10 @@ function startGame() {
 
   function displayLeaderboard() {
     let name = prompt ('What is your name?');
+    let time = timer.innerText;
     window.localStorage.setItem('name', name)
     window.localStorage.setItem('score', score)
-    window.localStorage.setItem('time', timer.innerText)
+    window.localStorage.setItem('time', time)
     updateLeaderboard();
 };
 
