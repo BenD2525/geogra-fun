@@ -139,10 +139,17 @@ function startGame() {
   function displayLeaderboard() {
     let name = prompt ('What is your name?');
     let time = timer.innerText;
-    window.localStorage.setItem('name', name)
-    window.localStorage.setItem('score', score)
-    window.localStorage.setItem('time', time)
-    updateLeaderboard();
+    if (gameType) {
+        window.localStorage.setItem('c-name', name)
+        window.localStorage.setItem('c-score', score)
+        window.localStorage.setItem('c-time', time)
+        updateLeaderboard();
+    } else {
+        window.localStorage.setItem('f-name', name)
+        window.localStorage.setItem('f-score', score)
+        window.localStorage.setItem('f-time', time)
+        updateLeaderboard();
+    }
 };
 
 

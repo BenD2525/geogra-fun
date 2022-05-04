@@ -41,12 +41,18 @@ function displayMenu() {
 };
 
   function updateLeaderboard() {
-      let leaderboardName = document.getElementById('l-name');
-      let leaderboardScore = document.getElementById('l-score');
-      let leaderboardTime = document.getElementById('l-time');
-      leaderboardName.innerText = `${localStorage.getItem('name')}`
-      leaderboardScore.innerText = `${localStorage.getItem('score')}`
-      leaderboardTime.innerText = `${localStorage.getItem('time')}`
+        let capitalName = document.getElementById('c-name');
+        let capitalScore = document.getElementById('c-score');
+        let capitalTime = document.getElementById('c-time');
+        let flagName = document.getElementById('f-name');
+        let flagScore = document.getElementById('f-score');
+        let flagTime = document.getElementById('f-time');
+        capitalName.innerText = `${localStorage.getItem('c-name')}`
+        capitalScore.innerText = `${localStorage.getItem('c-score')}`
+        capitalTime.innerText = `${localStorage.getItem('c-time')}`
+        flagName.innerText = `${localStorage.getItem('f-name')}`
+        flagScore.innerText = `${localStorage.getItem('f-score')}`
+        flagTime.innerText = `${localStorage.getItem('f-time')}`   
   };
 
   updateLeaderboard();
