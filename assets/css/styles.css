@@ -56,15 +56,12 @@
 }
 
 .main-section p {
-    color: white;
-    background: rgba(0, 0, 0, .4);
     width: auto;
     padding: 20px;
     text-align: center;
-    border-radius: 50px;
 }
 
-#capital-content, #flags-content {
+.modal-content {
     color: black;
     background-color: white;
 }
@@ -118,6 +115,8 @@ footer {
     border: none;
     font-size: medium;
     width: fit-content;
+    display: grid;
+    align-items: center;
 }
 
 .quiz-button a {
@@ -298,6 +297,11 @@ button:hover {
 
 .modal-button {
     padding: 20px;
+}
+
+#welcome-button {
+    margin-bottom: 50px;
+    width: fit-content;
 }
 
 .title-section {
