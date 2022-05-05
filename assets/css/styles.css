@@ -168,7 +168,7 @@ button a {
 
 #leaderboard-content {
     display: flex;
-    background-color: #040f16ff;
+    background-image: url(../images/pablo-heimplatz-ZODcBkEohk8-unsplash.jpg);
     flex-direction: row;
     justify-content: center;
     height: 500px;
