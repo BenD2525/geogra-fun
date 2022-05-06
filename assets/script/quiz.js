@@ -141,12 +141,17 @@ function startGame() {
     let time = timer.innerText;
     let result= {username: name, userScore: score, userTime: time};
     if (gameType) {
-        let capitalScores= localStorage.getItem(score);
-        let savedScores= [JSON.parse(capitalScores)];
-        console.log(capitalScores);
-        localStorage.setItem('score', JSON.stringify(savedScores));
-        console.log(savedScores);
-        updateLeaderboard();
+        let capitalScores= [];
+        capitalScores.push(result);
+        console.log("capitalScores", capitalScores);
+        localStorage.setItem('c-score', JSON.stringify(capitalScores));
+        let savedScores= localStorage.getItem('c-score');
+        JSON.parse(savedScores);
+        console.log("savedScores", savedScores);
+        let newScores= Array.from(savedScores);
+        newScores.push(result);
+        console.log("newScores", newScores);
+        localStorage.setItem('c-score',JSON.stringify(savedScores + result));
     } else {
         flagScores.push(name,time);
         
@@ -155,6 +160,21 @@ function startGame() {
         window.localStorage.setItem('f-time', time)
         updateLeaderboard();*/
     }
+};
+
+function updateLeaderboard() {
+    let capitalName = document.getElementById('c-name');
+    let capitalScore = document.getElementById('c-score');
+    let capitalTime = document.getElementById('c-time');
+    let flagName = document.getElementById('f-name');
+    let flagScore = document.getElementById('f-score');
+    let flagTime = document.getElementById('f-time');
+    capitalName.innerText = `${localStorage.getItem('c-name')}`
+    capitalScore.innerText = `${localStorage.getItem('c-score')}`
+    capitalTime.innerText = `${localStorage.getItem('c-time')}`
+    flagName.innerText = `${localStorage.getItem('f-name')}`
+    flagScore.innerText = `${localStorage.getItem('f-score')}`
+    flagTime.innerText = `${localStorage.getItem('f-time')}`   
 };
 
 
