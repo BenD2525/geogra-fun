@@ -139,16 +139,21 @@ function startGame() {
   function displayLeaderboard() {
     let name = prompt ('What is your name?');
     let time = timer.innerText;
+    let result= {username: name, userScore: score, userTime: time};
     if (gameType) {
-        window.localStorage.setItem('c-name', name)
-        window.localStorage.setItem('c-score', score)
-        window.localStorage.setItem('c-time', time)
+        let capitalScores= localStorage.getItem(score);
+        let savedScores= [JSON.parse(capitalScores)];
+        console.log(capitalScores);
+        localStorage.setItem('score', JSON.stringify(savedScores));
+        console.log(savedScores);
         updateLeaderboard();
     } else {
-        window.localStorage.setItem('f-name', name)
+        flagScores.push(name,time);
+        
+        /*window.localStorage.setItem('f-name', name)
         window.localStorage.setItem('f-score', score)
         window.localStorage.setItem('f-time', time)
-        updateLeaderboard();
+        updateLeaderboard();*/
     }
 };
 
