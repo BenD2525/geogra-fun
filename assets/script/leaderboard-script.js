@@ -11,6 +11,12 @@ const closeModalButtons= document.querySelectorAll('[data-close-button]');
 const overlay= document.getElementById('overlay');
 const gameType = document.getElementById('capitals');
 const modalButtons = Array.from(document.querySelectorAll(".modal-button"));
+const capitalsLeaderboard= document.getElementById('capitals-scores');
+const flagsLeaderboard= document.getElementById('flags-scores');
+const capitalsData= JSON.parse(localStorage.getItem('c-score'));
+const flagsData= JSON.parse(localStorage.getItem('f-score'));
+const capitalScores= capitalsData.scores;
+console.log(capitalScores);
 let questionId;
 let userCanAnswer;
 let currentQuestion;
@@ -40,21 +46,21 @@ function displayMenu() {
     navIsOpen() ? closeNav() : openNav();
 };
 
-  function updateLeaderboard() {
-        let capitalName = document.getElementById('c-name');
-        let capitalScore = document.getElementById('c-score');
-        let capitalTime = document.getElementById('c-time');
-        let flagName = document.getElementById('f-name');
-        let flagScore = document.getElementById('f-score');
-        let flagTime = document.getElementById('f-time');
-        capitalName.innerText = `${localStorage.getItem('c-name')}`
-        capitalScore.innerText = `${localStorage.getItem('c-score')}`
-        capitalTime.innerText = `${localStorage.getItem('c-time')}`
-        flagName.innerText = `${localStorage.getItem('f-name')}`
-        flagScore.innerText = `${localStorage.getItem('f-score')}`
-        flagTime.innerText = `${localStorage.getItem('f-time')}`   
-  };
+//Populates each row of the leaderboard
+function populateLeaderboard() {
+    capitalsLeaderboard.innerHTML= `<tr><td>${capitalScores.name}</td><td>${capitalScores.score}</td><td>${capitalScores.time}</td></tr>`
+};
 
-  updateLeaderboard();
+//Displays leaderboard
+function displayLeaderboard() {
+    if (capitalsData) {
+        capitalScores.forEach(populateLeaderboard());
+    } else {
+        return;
+    }
+};
+
+  displayLeaderboard();
+  
 
 

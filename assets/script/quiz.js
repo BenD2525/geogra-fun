@@ -9,7 +9,7 @@ const buttons = Array.from(document.querySelectorAll(".answer"));
 const scoreEl = document.querySelector("#score-section");
 const wrapper = document.querySelector(".wrapper");
 const navBar = document.getElementsByClassName("nav");
-const gameType = document.getElementById('capitals');
+const capitalGame = document.getElementById('capitals');
 let questionId;
 let userCanAnswer;
 let currentQuestion;
@@ -57,7 +57,7 @@ setInterval(function timer() {
 
 //Retrieves question from array
 function getCurrentQuestion(id) {
-    if (gameType) {
+    if (capitalGame) {
     return capitalQuestions.find((q) => q.id === id);   
     } else { 
     return questions.find((q) => q.id === id);
@@ -69,7 +69,7 @@ function displayQuiz() {
     currentQuestion = getCurrentQuestion(questionId);
     scoreEl.innerText = `Score: ${score}`;
     question.innerText = currentQuestion.question;
-    if (gameType) {
+    if (capitalGame) {
         questionBox.innerText= currentQuestion.capital;
     } else {
     questionBox.style.backgroundImage = `url(${currentQuestion.flagUrl})`;
@@ -139,32 +139,23 @@ function startGame() {
     let name = prompt ('What is your name?');
     let time = timer.innerText;
     let result= {username: name, userScore: score, userTime: time};
-    if (gameType) {
+    if (capitalGame) {
         const score = JSON.parse(localStorage.getItem('c-score'));
-            if (score) {
-                score.scores.push({name: result.username, score: result.userScore, time: result.userTime});
-                localStorage.setItem("c-score", JSON.stringify(score));     
-            } else {
-                localStorage.setItem("c-score", JSON.stringify({scores:[{name: result.username, score: result.userScore, time: result.userTime}]}));
-            }
+        if (score) {
+            score.scores.push({name: result.username, score: result.userScore, time: result.userTime});
+            localStorage.setItem("c-score", JSON.stringify(score));     
+        } else {
+            localStorage.setItem("c-score", JSON.stringify({scores:[{name: result.username, score: result.userScore, time: result.userTime}]}));
+        }
     } else {
-        
+        const score = JSON.parse(localStorage.getItem('f-score'));
+        if (score) {
+            score.scores.push({name: result.username, score: result.userScore, time: result.userTime});
+            localStorage.setItem("f-score", JSON.stringify(score));     
+        } else {
+            localStorage.setItem("f-score", JSON.stringify({scores:[{name: result.username, score: result.userScore, time: result.userTime}]}));
+        }
     }
-};
-
-function displayLeaderboard() {
-    let capitalName = document.getElementById('c-name');
-    let capitalScore = document.getElementById('c-score');
-    let capitalTime = document.getElementById('c-time');
-    let flagName = document.getElementById('f-name');
-    let flagScore = document.getElementById('f-score');
-    let flagTime = document.getElementById('f-time');
-    capitalName.innerText = `${localStorage.getItem('c-name')}`
-    capitalScore.innerText = `${localStorage.getItem('c-score')}`
-    capitalTime.innerText = `${localStorage.getItem('c-time')}`
-    flagName.innerText = `${localStorage.getItem('f-name')}`
-    flagScore.innerText = `${localStorage.getItem('f-score')}`
-    flagTime.innerText = `${localStorage.getItem('f-time')}`   
 };
 
 
