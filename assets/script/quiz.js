@@ -17,7 +17,6 @@ let score = 0;
 let game;
 let timer= document.getElementById('timer-box');
 
-
 // Burger Menu
 const navIsOpen = function() {
     if (wrapper.classList.contains ("nav-open")) {
@@ -89,7 +88,7 @@ function nextQuestion() {
         displayQuiz();
     } else {
         alert("You've finished!");
-        displayLeaderboard();
+        updateLeaderboard();
     }
 };
 
@@ -136,33 +135,24 @@ function startGame() {
   
   startGame();
 
-  function displayLeaderboard() {
+  function updateLeaderboard() {
     let name = prompt ('What is your name?');
     let time = timer.innerText;
     let result= {username: name, userScore: score, userTime: time};
     if (gameType) {
-        let capitalScores= [];
-        capitalScores.push(result);
-        console.log("capitalScores", capitalScores);
-        localStorage.setItem('c-score', JSON.stringify(capitalScores));
-        let savedScores= localStorage.getItem('c-score');
-        JSON.parse(savedScores);
-        console.log("savedScores", savedScores);
-        let newScores= Array.from(savedScores);
-        newScores.push(result);
-        console.log("newScores", newScores);
-        localStorage.setItem('c-score',JSON.stringify(savedScores + result));
+        const score = JSON.parse(localStorage.getItem('c-score'));
+            if (score) {
+                score.scores.push({name: result.username, score: result.userScore, time: result.userTime});
+                localStorage.setItem("c-score", JSON.stringify(score));     
+            } else {
+                localStorage.setItem("c-score", JSON.stringify({scores:[{name: result.username, score: result.userScore, time: result.userTime}]}));
+            }
     } else {
-        flagScores.push(name,time);
         
-        /*window.localStorage.setItem('f-name', name)
-        window.localStorage.setItem('f-score', score)
-        window.localStorage.setItem('f-time', time)
-        updateLeaderboard();*/
     }
 };
 
-function updateLeaderboard() {
+function displayLeaderboard() {
     let capitalName = document.getElementById('c-name');
     let capitalScore = document.getElementById('c-score');
     let capitalTime = document.getElementById('c-time');
