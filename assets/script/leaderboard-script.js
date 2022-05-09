@@ -35,12 +35,15 @@ function displayMenu() {
 };
 
 //Populates each row of the leaderboard
-function populateLeaderboard(score) {
+function populateCapitalsLeaderboard(score) {
     if (capitalsData) {
         capitalsLeaderboard.innerHTML += `<tr><td>${score.name}</td><td>${score.score}</td><td>${score.time}</td></tr>`
     } else {
         return;
     }
+};
+
+function populateFlagsLeaderboard(score) {
     if (flagsData) {
         flagsLeaderboard.innerHTML += `<tr><td>${score.name}</td><td>${score.score}</td><td>${score.time}</td></tr>`
     } else {
@@ -50,11 +53,16 @@ function populateLeaderboard(score) {
 
 //Displays leaderboard
 function displayLeaderboard() {
+    let sortedCapitalsScores= capitalScores.sort((a,b) => {
+        return b.score - a.score;
+    });
+
+    let sortedFlagsScores= flagsScores.sort((a,b) => {
+        return b.score - a.score;
+    });
+
     if (capitalsData) {
-        capitalScores.sort((a,b) => {
-            return b.score - a.score;
-        });
-        capitalScores.forEach(score => populateLeaderboard(score));
+        sortedCapitalsScores.forEach(score => populateCapitalsLeaderboard(score));
     } else {
         return;
     }
@@ -62,7 +70,9 @@ function displayLeaderboard() {
         flagsScores.sort((a,b) => {
             return b.score - a.score;
         });
-        flagsScores.forEach(score => populateLeaderboard(score));
+        sortedFlagsScores.forEach(score => populateFlagsLeaderboard(score));
+    } else {
+        return;
     }
 };
 
