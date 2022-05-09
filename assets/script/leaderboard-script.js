@@ -1,14 +1,6 @@
 //constant variables to be referenced
-const questionBox = document.querySelector("#question-box");
-const answers = Array.from(document.getElementsByClassName("answer"));
-const question = document.querySelector(".question");
-const buttons = Array.from(document.querySelectorAll(".answer"));
-const scoreEl = document.querySelector("#score-section");
 const wrapper = document.querySelector(".wrapper");
 const navBar = document.getElementsByClassName("nav");
-const openModalButtons= document.querySelectorAll('[data-modal-target');
-const closeModalButtons= document.querySelectorAll('[data-close-button]');
-const overlay= document.getElementById('overlay');
 const gameType = document.getElementById('capitals');
 const modalButtons = Array.from(document.querySelectorAll(".modal-button"));
 const capitalsLeaderboard= document.getElementById('capitals-scores');
@@ -16,12 +8,8 @@ const flagsLeaderboard= document.getElementById('flags-scores');
 const capitalsData= JSON.parse(localStorage.getItem('c-score'));
 const flagsData= JSON.parse(localStorage.getItem('f-score'));
 const capitalScores= capitalsData.scores;
-console.log(capitalScores);
-let questionId;
-let userCanAnswer;
-let currentQuestion;
-let score = 0;
-let game;
+const flagsScores= flagsData.scores;
+
 
 // Burger Menu
 const navIsOpen = function() {
@@ -47,16 +35,34 @@ function displayMenu() {
 };
 
 //Populates each row of the leaderboard
-function populateLeaderboard() {
-    capitalsLeaderboard.innerHTML= `<tr><td>${capitalScores.name}</td><td>${capitalScores.score}</td><td>${capitalScores.time}</td></tr>`
+function populateLeaderboard(score) {
+    if (capitalsData) {
+        capitalsLeaderboard.innerHTML += `<tr><td>${score.name}</td><td>${score.score}</td><td>${score.time}</td></tr>`
+    } else {
+        return;
+    }
+    if (flagsData) {
+        flagsLeaderboard.innerHTML += `<tr><td>${score.name}</td><td>${score.score}</td><td>${score.time}</td></tr>`
+    } else {
+        return;
+    }
 };
 
 //Displays leaderboard
 function displayLeaderboard() {
     if (capitalsData) {
-        capitalScores.forEach(populateLeaderboard());
+        capitalScores.sort((a,b) => {
+            return b.score - a.score;
+        });
+        capitalScores.forEach(score => populateLeaderboard(score));
     } else {
         return;
+    }
+    if (flagsData) {
+        flagsScores.sort((a,b) => {
+            return b.score - a.score;
+        });
+        flagsScores.forEach(score => populateLeaderboard(score));
     }
 };
 
