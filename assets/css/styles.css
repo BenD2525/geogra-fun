@@ -106,12 +106,9 @@ footer {
     width: fit-content;
     display: grid;
     align-items: center;
-}
-
-.quiz-button a {
-    background: rgba(0, 0, 0, .3);
     color: white;
     font-size: 40px;
+    font-weight: bold;
 }
 
 button {
