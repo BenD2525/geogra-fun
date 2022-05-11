@@ -11,13 +11,11 @@ const answers = Array.from(document.getElementsByClassName("answer"));
 const question = document.querySelector(".question");
 const buttons = Array.from(document.querySelectorAll(".answer"));
 const scoreEl = document.querySelector("#score-section");
-const navBar = document.getElementsByClassName("nav");
 const capitalGame = document.getElementById('capitals');
 let questionId;
 let userCanAnswer;
 let currentQuestion;
 let score = 0;
-let game;
 let timer = document.getElementById('timer-box');
 const burgerMenu = document.getElementById("toggle");
 const menuItems = document.getElementsByClassName("menu-item");
@@ -199,4 +197,4 @@ function updateLeaderboard() {
             }));
         }
     }
-};
+}
