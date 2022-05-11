@@ -23,14 +23,8 @@
 }
 
 .nav ul {
-    padding: 0px 75px 0px 75px;
     list-style-type: none;
-    display: grid;
-    align-content: center;
-    justify-content: space-between;
-    align-items: start;
-    grid-template-columns: 33% 33% 33%;
-    justify-items: center;
+    margin-bottom: 10px;
 }
 
 .nav li:hover {
@@ -311,7 +305,6 @@ button:hover {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     z-index: 99;
     background: black;
     color: white;
@@ -440,6 +433,11 @@ button:hover {
     .quiz-button p {
         background-color: white;
         color: black;
+    }
+
+    #toggle {
+        font-size: 20px;
+        width: fit-content;
     }
 }
 
