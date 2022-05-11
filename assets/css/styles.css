@@ -401,8 +401,15 @@ button:hover {
 
     .button-box button {
         font-size: large;
-        color: black;
         width: 150px;
+        border: 1px solid;
+        border-radius: 30px;
+        
+    }
+
+    .answer {
+        background-color: black;
+        color: white;
     }
 
     .socials {
