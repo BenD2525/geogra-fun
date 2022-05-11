@@ -49,18 +49,9 @@ The site has been checked using Google Lighthouse, with a score of 100 for acces
 ## HTML
 No errors were returned when passing through the official W3C validator
 
-![Home page HTML check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/html-check-home.PNG "Screenshot of Home page HTML check")
-![About us page HTML check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/html-check-about-us.PNG "Screenshot of About Us page HTML check")
-![Meet the dogs page HTML check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/html-check-meet-the-dogs.PNG "Screenshot of Meet the Dogs page HTML check")
-![Contact us page HTML check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/html-check-contact-us.PNG "Screenshot of Contact Us page HTML check")
-![Thankyou page HTML check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/html-check-thankyou.PNG "Screenshot of Thankyou page HTML check")
 
 ## CSS
 No errors were found when passing through the official (Jigsaw) validator
 
-![Home page CSS check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/css-check-home.PNG "Screenshot of Home page CSS check")
-![About us page CSS check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/css-check-about-us.PNG "Screenshot of About Us page CSS check")
-![Meet the dogs page CSS check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/css-check-meet-the-dogs.PNG "Screenshot of Meet the Dogs page CSS check")
-![Contact us page CSS check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/css-check-contact-us.PNG "Screenshot of Contact Us page CSS check")
-![Thankyou page CSS check](https://github.com/BenD2525/the-rescuers-p1/blob/main/documentation/css-check-thankyou.PNG "Screenshot of Thankyou page CSS check")
+
 
