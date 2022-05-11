@@ -56,11 +56,11 @@ No errors were returned when passing through the official W3C validator
 
 ## CSS
 No errors were found when passing through the official (Jigsaw) validator
-![Index CSS Screenshot](documentation/index_css_check.PNG)
-![Leaderboard CSS Screenshot](documentation/leaderboard_css_check.PNG)
-![Learn More CSS Screenshot](documentation/learn_more_css_check.PNG)
-![Flags CSS Screenshot](documentation/flags_css_check.PNG)
-![Capitals CSS Screenshot](documentation/capitals_css_check.PNG)
+![Index CSS Screenshot](index_css_check.PNG)
+![Leaderboard CSS Screenshot](leaderboard_css_check.PNG)
+![Learn More CSS Screenshot](learn_more_css_check.PNG)
+![Flags CSS Screenshot](flags_css_check.PNG)
+![Capitals CSS Screenshot](capitals_css_check.PNG)
 
 
 
