@@ -9,6 +9,9 @@
 
 .nav li {
     display: grid;
+    justify-items: end;
+    margin-right: 45px;
+    margin-top: 10px;
 }
 
 .nav a {
