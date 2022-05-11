@@ -118,7 +118,7 @@ const questions = [
             },
     {
         id: 10,
-        flagUrl: "../assets/images/angola-flag-small.png",
+        flagUrl: "assets/images/angola-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
                     1: "Angola",
