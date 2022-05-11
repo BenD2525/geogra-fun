@@ -40,7 +40,7 @@ This was tested on a laptop, PC, iPad, Iphone SE, Galaxy S8 and a Motorola G9.
 
 ## Accessibility
 
-The site has been checked using Google Lighthouse, with a score of 100 for accessibility.
+The site has been checked using Google Lighthouse, with a score of 95 for accessibility.
 
 ![Lighthouse Screenshot](lighthouse_image.PNG)
 
