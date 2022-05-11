@@ -72,7 +72,7 @@ The requirements listed above were then organised and structured into 4 pages, 3
 
 * Home
 * Leaderboard
-* About Us
+* Learn More
 * Quiz
 
 ## Skeleton
@@ -89,15 +89,15 @@ The link for Balsamiq is here: [Balsamiq](https://www.balsamiq.com/)
 # Features
 Below is a list of features which are included in this website:
 
-## Navigation Bar
+## Burger Menu
 
-This is at the top of each page below the title. It has links to each other page in the website other than the quiz itself, and it is set up to highlight the active page in green text, to show the user which page they are on. When hovering over another option, the option will become underlined, as per standard website conventions. These features allows the user to easily navigate through the website, and know which page they are on.
+This is at the top of each page below the title at the right of the page. Once clicked, the menu button displays links to each other page in the website other than the quiz itself. It is set up to highlight the active page in green text to show the user which page they are on. When hovering over another option, the option will become underlined, as per standard website conventions. These features allow the user to easily navigate through the website, and know which page they are on.
 
 ![Nav bar image]( "Screenshot of Nav bar")
 
 ## Home page main section
 
-The main section on the home page allows the user to navigate to either the capitals or flags quizzes. There are buttons to take the user to either quiz, along with some text that explains what each button is for. There is also an image of the earth in the middle of the page which serves to carry the theme of the website, and symbolises that the earth is at the center of everything.
+The main section on the home page allows the user to navigate to either the capitals or flags quizzes. There are buttons to take the user to either quiz, along with a picture that represents what each button is for. There is also an 'about us' button in the middle of the page which allows the user to learn the purpose of the website. There is also an image of the earth in the middle of the page which serves to carry the theme of the website, and symbolises that the earth is at the center of everything.
 
 ![Home page main section]( "Home page main section")
 
@@ -109,21 +109,37 @@ The footer section contains links to 4 forms of social media contained with thei
 
 ## Leaderboard page
 
-This page serves to document and rank the user's name, score and time taken to answer the quiz questions.
+This page serves to document and rank the user's name, score and time taken to answer the quiz questions for both quizzes.
 
 ![Leaderboard section]( "Screenshot of Leaderboard section")
 
-## About Us page 
+## Learn More page 
 
 This page will allow the user to view and read about the significance of capital cities and flags. The section contains 2 bubbles which serve to educate the user about capital cities and flags.
 
-![About Us page]( "Screenshot of About Us page")
+![Learn More page]( "Screenshot of Learn More page")
+
+## Flags quiz page
+
+This page allows the user to test their knowledge on flags of the world. There is a title at the top of the page which reinforces the theme of the page. Below the title there is the question box which is populated with a flag which changes per question. There is also a score count as well as a timer which keeps count of how long the user is taking to answer. There are 4 answer boxes which present the user with different answer options. Relevant styling is applied to the answer buttons once the user answers, and the question changes.
+
+![Flags quiz page]()
+
+## Capitals quiz page
+
+This page allows the user to test their knowledge on capitals of the world. There is a title at the top of the page which reinforces the theme of the page. Below the title there is the question box which is populated with a capital city which changes per question. There is also a score count as well as a timer which keeps count of how long the user is taking to answer. There are 4 answer boxes which present the user with different answer options. Relevant styling is applied to the answer buttons once the user answers, and the question changes.
+
+![Capitals quiz page]()
 
 # Features Left to Implement
 
 ## Interactive map of the world 
 
 A separate page which allows the user to click on different countries on a world map, which then show the user some facts about the country they have clicked on.
+
+## More questions on each quiz
+
+Additional questions for each quiz, randomised in order.
 
 # Testing
 
