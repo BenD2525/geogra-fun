@@ -42,16 +42,26 @@ This was tested on a laptop, PC, iPad, Iphone SE, Galaxy S8 and a Motorola G9.
 
 The site has been checked using Google Lighthouse, with a score of 100 for accessibility.
 
-![Lighthouse Screenshot]()
+![Lighthouse Screenshot](documentation/lighthouse_image.PNG)
 
 # Validator Testing
 
 ## HTML
 No errors were returned when passing through the official W3C validator
-
+![Index HTML Screenshot](documentation/index_html_check.PNG)
+![Leaderboard HTML Screenshot](documentation/leaderboard_html_check.PNG)
+![Learn More HTML Screenshot](documentation/learn_more_html_check.PNG)
+![Flags HTML Screenshot](documentation/flags_html_check.PNG)
+![Capitals HTML Screenshot](documentation/capitals_html_check.PNG)
 
 ## CSS
 No errors were found when passing through the official (Jigsaw) validator
+![Index CSS Screenshot](documentation/index_css_check.PNG)
+![Leaderboard CSS Screenshot](documentation/leaderboard_css_check.PNG)
+![Learn More CSS Screenshot](documentation/learn_more_css_check.PNG)
+![Flags CSS Screenshot](documentation/flags_css_check.PNG)
+![Capitals CSS Screenshot](documentation/capitals_css_check.PNG)
+
 
 
 
