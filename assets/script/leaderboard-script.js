@@ -1,5 +1,5 @@
 //constant variables to be referenced
-const wrapper = document.querySelector(".wrapper");
+const menu = document.querySelector(".menu");
 const navBar = document.getElementsByClassName("nav");
 const gameType = document.getElementById('capitals');
 const modalButtons = Array.from(document.querySelectorAll(".modal-button"));
@@ -7,31 +7,46 @@ const capitalsLeaderboard= document.getElementById('capitals-scores');
 const flagsLeaderboard= document.getElementById('flags-scores');
 const capitalsData= JSON.parse(localStorage.getItem('c-score'));
 const flagsData= JSON.parse(localStorage.getItem('f-score'));
+const burgerMenu= document.getElementById("toggle");
+const menuItems= document.getElementsByClassName("menu-item");
 
 
-
-// Burger Menu
+// Works out whether menu is open or not and provides a boolean
 const navIsOpen = function() {
-    if (wrapper.classList.contains ("nav-open")) {
+    if (menu.classList.contains ("nav-open")) {
         return true;
     }
     else {
         return false;
     }
 };
+
+// Adds open class to nav bar and removes closed class
 const openNav = () => {
-    wrapper.classList.add("nav-open");
-    wrapper.classList.remove("nav-close");
+    menu.classList.add("nav-open");
+    menu.classList.remove("nav-close");
 };
+
+// Adds closed class to nav bar and removes open class
 const closeNav = () => {
-    wrapper.classList.remove("nav-open");
-    wrapper.classList.add("nav-close");
+    menu.classList.remove("nav-open");
+    menu.classList.add("nav-close");
 };
 
 //Displays burger menu
 function displayMenu() {
     navIsOpen() ? closeNav() : openNav();
 };
+
+//Add event listener to toggle button
+burgerMenu.addEventListener('click', displayMenu);
+
+//Add event listener to nav buttons
+menuItems.forEach(
+    function(menuItem) {
+        menuItems.addEventListener("click", displayMenu);
+    }
+);
 
 //Populates each row of the leaderboard
 function populateCapitalsLeaderboard(score) {

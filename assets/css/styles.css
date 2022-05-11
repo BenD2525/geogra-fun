@@ -225,28 +225,12 @@ button a {
     margin: 5%;
 }
 
-.nav-close {
-    display: none;
-}
-
-.nav-open {
-    transform: translateY(0);
-}
-
-#toggle {
-    margin: 20px;
-}
-
 button:hover {
     cursor:pointer;
 }
 
 .answer:hover {
     background-color: #85baa1ff;
-}
-
-#toggle {
-    display: none;
 }
 
 .modal {
@@ -319,6 +303,39 @@ button:hover {
     border-radius: 10px;
 }
 
+#toggle {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 100px;
+    margin: 20px;
+    z-index: 100;
+}
+
+.menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.nav-open {
+    transform: translateY(0);
+}
+
+.nav-close {
+    display: none;
+}
+
 /*Medium Screen Media Queries*/
 @media screen and (max-width: 1030px) {
 
@@ -334,18 +351,6 @@ button:hover {
         font-size: 15px;
     }
 
-    #toggle {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        width: 100px;
-    }
-
-    .wrapper {
-        display: none;
-    }
-
     .leaderboard {
         width: 300px;
     }
@@ -358,21 +363,6 @@ button:hover {
         width: 100px;
 
     }
-
-    .menu {
-        position: fixed;
-        transform: translateY(-100%);
-        transition: transform 0.2s;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 99;
-        background: black;
-        color: white;
-        list-style: none;
-        padding-top: 4rem;
-    }
 }
 
 
@@ -382,11 +372,12 @@ button:hover {
         display: contents;
         background-image: url(../images/background.jpg);
     }
+    
     .main-section {
         color: black;
     }
 
-    button {
+    #welcome-button {
         background-color: black;
         color: white;
         margin: 20px;

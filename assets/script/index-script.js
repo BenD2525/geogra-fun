@@ -1,5 +1,5 @@
 //constant variables to be referenced
-const wrapper = document.querySelector(".wrapper");
+const menu = document.querySelector(".menu");
 const navBar = document.getElementsByClassName("nav");
 const openModalButtons= document.querySelectorAll('[data-modal-target');
 const closeModalButtons= document.querySelectorAll('[data-close-button]');
@@ -48,7 +48,7 @@ function closeModal(modal) {
 
 // Works out whether menu is open or not and provides a boolean
 const navIsOpen = function() {
-    if (wrapper.classList.contains ("nav-open")) {
+    if (menu.classList.contains ("nav-open")) {
         return true;
     }
     else {
@@ -58,14 +58,14 @@ const navIsOpen = function() {
 
 // Adds open class to nav bar and removes closed class
 const openNav = () => {
-    wrapper.classList.add("nav-open");
-    wrapper.classList.remove("nav-close");
+    menu.classList.add("nav-open");
+    menu.classList.remove("nav-close");
 };
 
 // Adds closed class to nav bar and removes open class
 const closeNav = () => {
-    wrapper.classList.remove("nav-open");
-    wrapper.classList.add("nav-close");
+    menu.classList.remove("nav-open");
+    menu.classList.add("nav-close");
 };
 
 //Displays burger menu
