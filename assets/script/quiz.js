@@ -91,7 +91,6 @@ function displayQuiz() {
     questionBox.style.backgroundImage = `url(${currentQuestion.flagUrl})`;
     }
     buttons.forEach((btn) => {
-      btn.style.backgroundColor = "white";
       btn.innerText = currentQuestion.answer[btn.value];
     });
 };
