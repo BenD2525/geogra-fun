@@ -190,6 +190,7 @@ button a {
 
 #leaderboard tbody {
     height: auto;
+    font-size: 25px;
 }
 
 #question-box {
@@ -342,6 +343,7 @@ button:hover {
     
     #middle-section img {
        width: 200px;
+       margin: 50px;
     }
 
     .main-section p {
@@ -349,16 +351,20 @@ button:hover {
     }
 
     .leaderboard {
-        width: 300px;
+        width: 100%;
+        margin: 30px;
     }
 
     #leaderboard {
-        width: 200px;
+        width: 100%;
     }
 
     #leaderboard td {
         width: 100px;
+    }
 
+    #leaderboard thead {
+        font-size: 25px;
     }
 }
 
@@ -447,9 +453,31 @@ button:hover {
         font-size: 20px;
         width: fit-content;
     }
+
+    .leaderboard h4 {
+        font-size: 25px;
+    }
 }
 
 /*Small Screen Media Queries*/
+@media screen and (max-width: 600px) {
+    #leaderboard tbody {
+        font-size: 20px;
+    }
+
+    .leaderboard {
+        width: auto;
+        height: fit-content;
+        margin: 30px;
+        padding-bottom: 20px;
+    }
+
+    #leaderboard-content {
+        flex-direction: column;
+}
+}
+
+
 @media screen and (max-width: 410px) {
     .socials ul {
         display: grid;
