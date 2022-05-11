@@ -160,7 +160,7 @@ button a {
     height: 80%;
 }
 
-#leaderboard {
+.score-leaderboard {
     width: 100%;
     text-align: center;
 }
@@ -186,7 +186,7 @@ button a {
     justify-content: space-evenly;
 }
 
-#leaderboard tbody {
+.score-leaderboard tbody {
     height: auto;
     font-size: 25px;
 }
@@ -353,15 +353,15 @@ button:hover {
         margin: 30px;
     }
 
-    #leaderboard {
+    .score-leaderboard {
         width: 100%;
     }
 
-    #leaderboard td {
+    .score-leaderboard td {
         width: 100px;
     }
 
-    #leaderboard thead {
+    .score-leaderboard thead {
         font-size: 25px;
     }
 }
