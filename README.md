@@ -81,10 +81,12 @@ A wireframe for the website was produced using a desktop version of Balsamiq in 
 
 The link for Balsamiq is here: [Balsamiq](https://www.balsamiq.com/)
 
-![HomePageWireframe]( "Home page Wireframe")
-![AboutUsWireframe]( "Leaderboard page Wireframe")
-![MeetTheDogsWireframe]( "About Us page Wireframe")
-![ContactUsWireframe]( "Quiz page Wireframe")
+![HomePageWireframe](assets/documentation/wireframe_home.PNG)
+![Leaderboards Wireframe](assets/documentation/wireframe_leaderboards.PNG)
+![Learn More Wireframe](assets/documentation/wireframe_learn_more.PNG)
+![Capitals Quiz Wireframe](assets/documentation/wireframe_capitals_quiz.PNG)
+![Flags Quiz Wireframe](assets/documentation/wireframe_flags_quiz.PNG)
+![Site Map Wireframe](assets/documentation/wireframe_site_map.PNG)
 
 # Features
 Below is a list of features which are included in this website:
