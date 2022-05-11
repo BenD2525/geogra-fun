@@ -25,6 +25,7 @@
 .nav ul {
     list-style-type: none;
     margin-bottom: 10px;
+    margin-top: 0px;
 }
 
 .nav li:hover {
@@ -273,6 +274,10 @@ button:hover {
 
 .modal-button {
     padding: 20px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    font-size: 25px;
 }
 
 #welcome-button {
