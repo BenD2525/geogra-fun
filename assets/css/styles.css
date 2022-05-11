@@ -160,11 +160,11 @@ button a {
     background-image: url(../images/pablo-heimplatz-ZODcBkEohk8-unsplash.jpg);
     flex-direction: row;
     justify-content: center;
-    height: 500px;
+    height: 80%;
 }
 
 #leaderboard  {
-    width: 500px;
+    width: 100%;
     text-align: center;
 }
 
@@ -176,6 +176,7 @@ button a {
     font-family: 'Oswald', sans-serif; 
     text-align: center;
     margin: 10px;
+    width: 30%;
 }
 
 .leaderboard tr {
