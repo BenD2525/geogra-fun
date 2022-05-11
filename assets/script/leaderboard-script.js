@@ -7,8 +7,7 @@ const capitalsLeaderboard= document.getElementById('capitals-scores');
 const flagsLeaderboard= document.getElementById('flags-scores');
 const capitalsData= JSON.parse(localStorage.getItem('c-score'));
 const flagsData= JSON.parse(localStorage.getItem('f-score'));
-const capitalScores= capitalsData.scores;
-const flagsScores= flagsData.scores;
+
 
 
 // Burger Menu
@@ -52,31 +51,32 @@ function populateFlagsLeaderboard(score) {
 };
 
 //Displays leaderboard
-function displayLeaderboard() {
-    let sortedCapitalsScores= capitalScores.sort((a,b) => {
+function displayCapitalsLeaderboard() {
+    if (!capitalsData) {
+        return;
+    } else {
+        let capitalScores= capitalsData.scores;
+        let sortedCapitalsScores= capitalScores.sort((a,b) => {
         return b.score - a.score;
     });
-
-    let sortedFlagsScores= flagsScores.sort((a,b) => {
-        return b.score - a.score;
-    });
-
-    if (capitalsData) {
         sortedCapitalsScores.forEach(score => populateCapitalsLeaderboard(score));
-    } else {
-        return;
-    }
-    if (flagsData) {
-        flagsScores.sort((a,b) => {
-            return b.score - a.score;
-        });
-        sortedFlagsScores.forEach(score => populateFlagsLeaderboard(score));
-    } else {
-        return;
     }
 };
 
-  displayLeaderboard();
+function displayFlagsLeaderboard() {
+    if (!flagsData) {
+        return;
+    } else {
+        let flagsScores= flagsData.scores;
+        let sortedFlagsScores= flagsScores.sort((a,b) => {
+            return b.score - a.score;
+        });
+        sortedFlagsScores.forEach(score => populateFlagsLeaderboard(score));   
+    }
+};
+
+displayCapitalsLeaderboard();
+displayFlagsLeaderboard();
   
 
 

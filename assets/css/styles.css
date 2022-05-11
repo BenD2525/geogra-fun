@@ -319,6 +319,7 @@ button:hover {
     border-radius: 10px;
 }
 
+/*Medium Screen Media Queries*/
 @media screen and (max-width: 1030px) {
 
     .header-section {
@@ -328,6 +329,7 @@ button:hover {
     #middle-section img {
        width: 200px;
     }
+
     .main-section p {
         font-size: 15px;
     }
@@ -342,6 +344,19 @@ button:hover {
 
     .wrapper {
         display: none;
+    }
+
+    .leaderboard {
+        width: 300px;
+    }
+
+    #leaderboard {
+        width: 200px;
+    }
+
+    #leaderboard td {
+        width: 100px;
+
     }
 }
 
@@ -416,11 +431,9 @@ button:hover {
         background-color: white;
         color: black;
     }
-
-
-
 }
 
+/*Small Screen Media Queries*/
 @media screen and (max-width: 410px) {
     .socials ul {
         display: grid;
