@@ -94,6 +94,7 @@ function displayQuiz() {
     }
     buttons.forEach((btn) => {
         btn.innerText = currentQuestion.answer[btn.value];
+        btn.style.backgroundColor = "white";
     });
 };
 

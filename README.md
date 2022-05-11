@@ -6,7 +6,7 @@ The quiz currently has 2 sets of questions, although more could be added in futu
 
 To meet the needs of this target audience, the quiz contains information on the significance of flags and captal cities, as well as a quiz which serves to educate the user oon both flags and capitals. There is also a leaderboard which serves to document the user's score and time for future comparison.
 
-![Responsive Design Image](assets/documentation/responsive_image.PNG)
+![Responsive Design Image](documentation/responsive_image.PNG)
 
 # Languages
 
@@ -81,12 +81,12 @@ A wireframe for the website was produced using a desktop version of Balsamiq in 
 
 The link for Balsamiq is here: [Balsamiq](https://www.balsamiq.com/)
 
-![HomePageWireframe](assets/documentation/wireframe_home.PNG)
-![Leaderboards Wireframe](assets/documentation/wireframe_leaderboards.PNG)
-![Learn More Wireframe](assets/documentation/wireframe_learn_more.PNG)
-![Capitals Quiz Wireframe](assets/documentation/wireframe_capitals_quiz.PNG)
-![Flags Quiz Wireframe](assets/documentation/wireframe_flags_quiz.PNG)
-![Site Map Wireframe](assets/documentation/wireframe_site_map.PNG)
+![HomePageWireframe](documentation/wireframe_home.PNG)
+![Leaderboards Wireframe](documentation/wireframe_leaderboards.PNG)
+![Learn More Wireframe](documentation/wireframe_learn_more.PNG)
+![Capitals Quiz Wireframe](documentation/wireframe_capitals_quiz.PNG)
+![Flags Quiz Wireframe](documentation/wireframe_flags_quiz.PNG)
+![Site Map Wireframe](documentation/wireframe_site_map.PNG)
 
 # Features
 Below is a list of features which are included in this website:
@@ -95,43 +95,43 @@ Below is a list of features which are included in this website:
 
 This is at the top of each page below the title at the right of the page. Once clicked, the menu button displays links to each other page in the website other than the quiz itself. It is set up to highlight the active page in green text to show the user which page they are on. When hovering over another option, the option will become underlined, as per standard website conventions. These features allow the user to easily navigate through the website, and know which page they are on.
 
-![Burger Menu image](assets/documentation/menu_image.PNG)
+![Burger Menu image](documentation/menu_image.PNG)
 
 ## Home page main section
 
 The main section on the home page allows the user to navigate to either the capitals or flags quizzes. There are buttons to take the user to either quiz, along with a picture that represents what each button is for. There is also an 'about us' button in the middle of the page which allows the user to learn the purpose of the website. There is also an image of the earth in the middle of the page which serves to carry the theme of the website, and symbolises that the earth is at the center of everything.
 
-![Home page main section](assets/documentation/home_page_image.PNG)
+![Home page main section](documentation/home_page_image.PNG)
 
 ## The Footer
 
 The footer section contains links to 4 forms of social media contained with their icons (Facebook/Twitter/Instagram/Youtube) as well as a message encouraging the user to explore the rehoming service further on Social Media. It also contains a copyright, along with the author's name and year.
 
-![Footer](assets/documentation/footer_image.PNG)
+![Footer](documentation/footer_image.PNG)
 
 ## Leaderboard page
 
 This page serves to document and rank the user's name, score and time taken to answer the quiz questions for both quizzes.
 
-![Leaderboard section](assets/documentation/leaderboards_image.PNG)
+![Leaderboard section](documentation/leaderboards_image.PNG)
 
 ## Learn More page 
 
 This page will allow the user to view and read about the significance of capital cities and flags. The section contains 2 bubbles which serve to educate the user about capital cities and flags.
 
-![Learn More page](assets/documentation/learn_more_image.PNG)
+![Learn More page](documentation/learn_more_image.PNG)
 
 ## Flags quiz page
 
 This page allows the user to test their knowledge on flags of the world. There is a title at the top of the page which reinforces the theme of the page. Below the title there is the question box which is populated with a flag which changes per question. There is also a score count as well as a timer which keeps count of how long the user is taking to answer. There are 4 answer boxes which present the user with different answer options. Relevant styling is applied to the answer buttons once the user answers, and the question changes.
 
-![Flags quiz page](assets/documentation/flags_image.PNG)
+![Flags quiz page](documentation/flags_image.PNG)
 
 ## Capitals quiz page
 
 This page allows the user to test their knowledge on capitals of the world. There is a title at the top of the page which reinforces the theme of the page. Below the title there is the question box which is populated with a capital city which changes per question. There is also a score count as well as a timer which keeps count of how long the user is taking to answer. There are 4 answer boxes which present the user with different answer options. Relevant styling is applied to the answer buttons once the user answers, and the question changes.
 
-![Capitals quiz page](assets/documentation/capitals_image.PNG)
+![Capitals quiz page](documentation/capitals_image.PNG)
 
 # Features Left to Implement
 
