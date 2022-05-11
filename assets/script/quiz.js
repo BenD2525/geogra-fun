@@ -153,8 +153,9 @@ function startGame() {
 
   function updateLeaderboard() {
     let name = prompt ('What is your name?');
-    let time = timer.innerText;
-    let result= {username: name, userScore: score, userTime: time};
+    let time = timer.innerText.split(" ");
+    let recordedTime= time.pop();
+    let result= {username: name, userScore: score, userTime: recordedTime};
     if (capitalGame) {
         const score = JSON.parse(localStorage.getItem('c-score'));
         if (score) {
