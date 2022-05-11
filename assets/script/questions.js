@@ -1,7 +1,7 @@
 const questions = [
     {   
         id: 1,
-        flagUrl: "../assets/images/india-flag-small.png",
+        flagUrl: "assets/images/india-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "China",
@@ -14,7 +14,7 @@ const questions = [
     },
     {   
         id: 2,
-        flagUrl: "../assets/images/argentina-flag-small.png",
+        flagUrl: "assets/images/argentina-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "Argentina",
@@ -27,7 +27,7 @@ const questions = [
     },
     {   
         id: 3,
-        flagUrl: "../assets/images/belgium-flag-small.png",
+        flagUrl: "assets/images/belgium-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "Scotland",
@@ -40,7 +40,7 @@ const questions = [
     },
     {
         id: 4,
-        flagUrl: "../assets/images/australia-flag-small.png",
+        flagUrl: "assets/images/australia-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "New Zealand",
@@ -53,7 +53,7 @@ const questions = [
     },
     {
         id: 5,
-        flagUrl: "../assets/images/spain-flag-small.png",
+        flagUrl: "assets/images/spain-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "Spain",
@@ -66,7 +66,7 @@ const questions = [
     },
     {
         id: 6,
-        flagUrl: "../assets/images/romania-flag-small.png",
+        flagUrl: "assets/images/romania-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "Germany",
@@ -79,7 +79,7 @@ const questions = [
     },
     {
         id: 7,
-        flagUrl: "../assets/images/czech-republic-flag-small.png",
+        flagUrl: "assets/images/czech-republic-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
                 1: "Czechia",
@@ -92,7 +92,7 @@ const questions = [
         },
     {
         id: 8,
-        flagUrl: "../assets/images/monaco-flag-small.png",
+        flagUrl: "assets/images/monaco-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
                     1: "Iceland",
@@ -105,7 +105,7 @@ const questions = [
             },
     {
         id: 9,
-        flagUrl: "../assets/images/jamaica-flag-small.png",
+        flagUrl: "assets/images/jamaica-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
                     1: "Zimbabwe",
