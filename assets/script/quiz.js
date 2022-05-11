@@ -2,12 +2,12 @@
 import {questions, capitalQuestions} from "./questions.js";
 
 //constant variables to be referenced
+const menu = document.querySelector(".menu");
 const questionBox = document.querySelector("#question-box");
 const answers = Array.from(document.getElementsByClassName("answer"));
 const question = document.querySelector(".question");
 const buttons = Array.from(document.querySelectorAll(".answer"));
 const scoreEl = document.querySelector("#score-section");
-const wrapper = document.querySelector(".wrapper");
 const navBar = document.getElementsByClassName("nav");
 const capitalGame = document.getElementById('capitals');
 let questionId;
@@ -16,29 +16,45 @@ let currentQuestion;
 let score = 0;
 let game;
 let timer= document.getElementById('timer-box');
+const burgerMenu= document.getElementById("toggle");
+const menuItems= document.getElementsByClassName("menu-item");
 
-// Burger Menu
+// Works out whether menu is open or not and provides a boolean
 const navIsOpen = function() {
-    if (wrapper.classList.contains ("nav-open")) {
+    if (menu.classList.contains ("nav-open")) {
         return true;
     }
     else {
         return false;
     }
 };
+
+// Adds open class to nav bar and removes closed class
 const openNav = () => {
-    wrapper.classList.add("nav-open");
-    wrapper.classList.remove("nav-close");
+    menu.classList.add("nav-open");
+    menu.classList.remove("nav-close");
 };
+
+// Adds closed class to nav bar and removes open class
 const closeNav = () => {
-    wrapper.classList.remove("nav-open");
-    wrapper.classList.add("nav-close");
+    menu.classList.remove("nav-open");
+    menu.classList.add("nav-close");
 };
 
 //Displays burger menu
 function displayMenu() {
     navIsOpen() ? closeNav() : openNav();
 };
+
+//Add event listener to toggle button
+burgerMenu.addEventListener('click', displayMenu);
+
+//Add event listener to nav buttons
+Array.from(menuItems).forEach(
+    function(menuItem) {
+        menuItem.addEventListener("click", displayMenu);
+    }
+);
 
 // Timer
 let totalSeconds= 0

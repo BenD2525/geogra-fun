@@ -73,8 +73,8 @@ function displayMenu() {
 burgerMenu.addEventListener('click', displayMenu);
 
 //Add event listener to nav buttons
-menuItems.forEach(
+Array.from(menuItems).forEach(
     function(menuItem) {
-        menuItems.addEventListener("click", displayMenu);
+        menuItem.addEventListener("click", displayMenu);
     }
 );
