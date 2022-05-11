@@ -150,6 +150,7 @@ button a {
 #question-middle-section {
     display: grid;
     grid-template-rows: 33% 33% 33%;
+    height: 500px;
 }
 
 #leaderboard-content {
