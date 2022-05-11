@@ -156,6 +156,7 @@ The live link can be found here - []()
 * The code for the timer was created using the information gathered in this article from W3 schools:[W3Schools](https://www.w3schools.com/jsref/met_win_setinterval.asp)
 * The code for the modals was created using this walkthrough from Web Dev Simplified: [Web Dev Simplified](https://www.youtube.com/watch?v=MBaw_6cPmAw&t=182s)
 * All fonts were taken from Google Fonts: [Google Fonts](https://fonts.google.com/)
+* Thanks to Mike Avgeros and the Slack community for general help with understanding .forEach and leaderboard functions
 
 ## Media
 

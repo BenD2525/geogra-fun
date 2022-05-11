@@ -9,11 +9,10 @@
 .header-section {
     font-family: Oswald, sans-serif;
     display: grid;
-    grid-template-columns: 55% 45%;
     background-color: #040f16ff;
     color: white;
     align-items: center;
-    justify-items: end;
+    justify-items: center;
 }
 
 .nav li {
