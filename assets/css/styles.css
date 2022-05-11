@@ -1,11 +1,3 @@
-/* Colour palette from Coolors
---eton-blue: #85baa1ff;
---aero-blue: #ceeddbff;
---cool-grey: #8b8baeff;
---skobeloff: #00635dff;
---rich-black-fogra-29: #040f16ff;
-*/
-
 .header-section {
     font-family: Oswald, sans-serif;
     display: grid;
@@ -338,6 +330,11 @@ button:hover {
 /*Medium Screen Media Queries*/
 @media screen and (max-width: 1030px) {
 
+    .main-section {
+        font-size: 25px;
+
+    }
+
     .header-section {
         font-size: 15px;
     }
@@ -370,6 +367,14 @@ button:hover {
     #home-content {
         display: contents;
         background-image: url(../images/background.jpg);
+    }
+
+    #right-section {
+        margin-bottom: 30px;
+    }
+
+    .socials li {
+        color: white;
     }
     
     .main-section {
