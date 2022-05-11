@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,66 +15,81 @@
     <!-- Link to CSS-->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
     <div class="header-section">
-    <!-- Title -->
+        <!-- Title -->
         <div class="title-section">
             <h1>Geografun</h1>
         </div>
-    <!-- Nav -->
+        <!-- Nav -->
         <div class="nav">
             <ul class="menu">
                 <li class="active menu-item">Home</li>
                 <li><a href="leaderboard.html" class="menu-item">Leaderboard</a></li>
                 <li><a href="learn-more.html" class="menu-item">Learn More</a></li>
-            <ul>
+                <ul>
         </div>
         <!-- Burger Menu -->
-    <button id="toggle">Menu</button>
+        <button id="toggle">Menu</button>
     </div>
-<section id="home-content">
-    <div id="left-section" class="main-section">
-        <button class="quiz-button"> <a href="flags.html">Flags</a>
-            <img src="../geogra-fun/assets/images/samantha-woodford-hBb9yB3zZ5s-unsplash.jpg" alt="picture of a series of white flags">
-        </button>
-    </div>
-    <div id="middle-section" class="main-section">
-        <button data-modal-target="#modal" class="modal-button" id="welcome-button">About us</button>
-        <div class = "modal" id="welcome-section">
-            <div class="modal-header">
-                <h3>What are we all about?</h3>
-                <button data-close-button class="close-button">&times;</button>
-            </div>
-            <p class="modal-content"> Welcome to Geografun! This is a fun quiz for all ages who wish to test their knowledge on the flags and capital cities of countries around the world.
-                You can check your score on the leaderboards once you have taken a quiz, or you can learn more about either topic on 'Learn More'". For now, click one
-                of the buttons below to get started.
-            </p>
+    <section id="home-content">
+        <!-- Button for Flags quiz -->
+        <div id="left-section" class="main-section">
+            <button class="quiz-button"> <a href="flags.html">Flags</a>
+                <img src="../geogra-fun/assets/images/samantha-woodford-hBb9yB3zZ5s-unsplash.jpg"
+                    alt="picture of a series of white flags">
+            </button>
         </div>
-        <img src="assets/images/earth.jpg" alt="picture of the Earth">
-    </div>
-    <div id="right-section" class="main-section">
-        <button class="quiz-button"><a href="capitals.html">Capitals</a>
-            <img src="../geogra-fun/assets/images/jonathan-chng-7_WyzplsaSE-unsplash.jpg" alt="picture of st paul's cathedral">
-        </button>
-        <div id="overlay"></div>
-    </div>
-</section>
+        <div id="middle-section" class="main-section">
+            <!-- Welcome/About us section -->
+            <button data-modal-target="#modal" class="modal-button" id="welcome-button">About us</button>
+            <div class="modal" id="welcome-section">
+                <div class="modal-header">
+                    <h3>What are we all about?</h3>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <p class="modal-content"> Welcome to Geografun! This is a fun quiz for all ages who wish to test their
+                    knowledge on the flags and capital cities of countries around the world.
+                    You can check your score on the leaderboards once you have taken a quiz, or you can learn more about
+                    either topic on 'Learn More'". For now, click one
+                    of the buttons below to get started.
+                </p>
+            </div>
+            <!-- Center image of the earth -->
+            <img src="assets/images/earth.jpg" alt="picture of the Earth">
+        </div>
+        <!-- Button for Capitals quiz -->
+        <div id="right-section" class="main-section">
+            <button class="quiz-button"><a href="capitals.html">Capitals</a>
+                <img src="../geogra-fun/assets/images/jonathan-chng-7_WyzplsaSE-unsplash.jpg"
+                    alt="picture of st paul's cathedral">
+            </button>
+            <!-- Overlay to show when modals are active-->
+            <div id="overlay"></div>
+        </div>
+    </section>
     <footer>
         <!-- Social media -->
         <div class="socials">
             <h3>Check us out on social media for more Geografun!</h3>
             <ul>
-                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                <li><a href="https://twitter.com/?lang=en" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i
+                            class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/?lang=en" target="_blank" rel="noopener" aria-label="Twitter"><i
+                            class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i
+                            class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Youtube"><i
+                            class="fab fa-youtube" aria-hidden="true"></i></a></li>
             </ul>
             <h4>Copyright Ben Dawson 2022</h4>
         </div>
     </footer>
     <!-- Link to JS file-->
-    <script type= "module" src="assets/script/index-script.js"></script>
+    <script type="module" src="assets/script/index-script.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/cdefc89d16.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

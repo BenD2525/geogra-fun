@@ -3,20 +3,19 @@ const menu = document.querySelector(".menu");
 const navBar = document.getElementsByClassName("nav");
 const gameType = document.getElementById('capitals');
 const modalButtons = Array.from(document.querySelectorAll(".modal-button"));
-const capitalsLeaderboard= document.getElementById('capitals-scores');
-const flagsLeaderboard= document.getElementById('flags-scores');
-const capitalsData= JSON.parse(localStorage.getItem('c-score'));
-const flagsData= JSON.parse(localStorage.getItem('f-score'));
-const burgerMenu= document.getElementById("toggle");
-const menuItems= document.getElementsByClassName("menu-item");
+const capitalsLeaderboard = document.getElementById('capitals-scores');
+const flagsLeaderboard = document.getElementById('flags-scores');
+const capitalsData = JSON.parse(localStorage.getItem('c-score'));
+const flagsData = JSON.parse(localStorage.getItem('f-score'));
+const burgerMenu = document.getElementById("toggle");
+const menuItems = document.getElementsByClassName("menu-item");
 
 
 // Works out whether menu is open or not and provides a boolean
-const navIsOpen = function() {
-    if (menu.classList.contains ("nav-open")) {
+const navIsOpen = function () {
+    if (menu.classList.contains("nav-open")) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 };
@@ -43,7 +42,7 @@ burgerMenu.addEventListener('click', displayMenu);
 
 //Add event listener to nav buttons
 Array.from(menuItems).forEach(
-    function(menuItem) {
+    function (menuItem) {
         menuItem.addEventListener("click", displayMenu);
     }
 );
@@ -70,10 +69,10 @@ function displayCapitalsLeaderboard() {
     if (!capitalsData) {
         return;
     } else {
-        let capitalScores= capitalsData.scores;
-        let sortedCapitalsScores= capitalScores.sort((a,b) => {
-        return b.score - a.score;
-    });
+        let capitalScores = capitalsData.scores;
+        let sortedCapitalsScores = capitalScores.sort((a, b) => {
+            return b.score - a.score;
+        });
         sortedCapitalsScores.forEach(score => populateCapitalsLeaderboard(score));
     }
 };
@@ -82,16 +81,13 @@ function displayFlagsLeaderboard() {
     if (!flagsData) {
         return;
     } else {
-        let flagsScores= flagsData.scores;
-        let sortedFlagsScores= flagsScores.sort((a,b) => {
+        let flagsScores = flagsData.scores;
+        let sortedFlagsScores = flagsScores.sort((a, b) => {
             return b.score - a.score;
         });
-        sortedFlagsScores.forEach(score => populateFlagsLeaderboard(score));   
+        sortedFlagsScores.forEach(score => populateFlagsLeaderboard(score));
     }
 };
 
 displayCapitalsLeaderboard();
 displayFlagsLeaderboard();
-  
-
-

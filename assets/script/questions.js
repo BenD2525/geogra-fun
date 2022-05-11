@@ -1,18 +1,17 @@
-const questions = [
-    {   
+const questions = [{
         id: 1,
         flagUrl: "assets/images/india-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
             1: "China",
-            2: "India", 
+            2: "India",
             3: "Egypt",
             4: "Rwanda"
         },
         correct: 2,
         next: true
     },
-    {   
+    {
         id: 2,
         flagUrl: "assets/images/argentina-flag-small.png",
         question: "The above is the flag of which country?",
@@ -25,7 +24,7 @@ const questions = [
         correct: 1,
         next: true
     },
-    {   
+    {
         id: 3,
         flagUrl: "assets/images/belgium-flag-small.png",
         question: "The above is the flag of which country?",
@@ -82,70 +81,69 @@ const questions = [
         flagUrl: "assets/images/czech-republic-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
-                1: "Czechia",
-                2: "Barbados",
-                3: "Kazakhstan",
-                4: "Israel"
-            },
+            1: "Czechia",
+            2: "Barbados",
+            3: "Kazakhstan",
+            4: "Israel"
+        },
         correct: 1,
         next: true
-        },
+    },
     {
         id: 8,
         flagUrl: "assets/images/monaco-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
-                    1: "Iceland",
-                    2: "Ethiopia",
-                    3: "Poland",
-                    4: "Monaco"
-                },
+            1: "Iceland",
+            2: "Ethiopia",
+            3: "Poland",
+            4: "Monaco"
+        },
         correct: 4,
         next: true
-            },
+    },
     {
         id: 9,
         flagUrl: "assets/images/jamaica-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
-                    1: "Zimbabwe",
-                    2: "Panama",
-                    3: "Jamaica",
-                    4: "Nigeria"
-                    },
+            1: "Zimbabwe",
+            2: "Panama",
+            3: "Jamaica",
+            4: "Nigeria"
+        },
         correct: 3,
         next: true
-            },
+    },
     {
         id: 10,
         flagUrl: "assets/images/angola-flag-small.png",
         question: "The above is the flag of which country?",
         answer: {
-                    1: "Angola",
-                    2: "Indonesia",
-                    3: "Somalia",
-                    4: "Nepal"
-                    },
+            1: "Angola",
+            2: "Indonesia",
+            3: "Somalia",
+            4: "Nepal"
+        },
         correct: 1,
         next: false
     },
 ];
 
-const capitalQuestions = [
-    {   
+const capitalQuestions = [{
         id: 1,
         capital: "Kyiv",
         question: "The above is the capital of which country?",
         answer: {
             1: "Turkey",
-            2: "Ukraine", 
+            2: "Ukraine",
             3: "Luxembourg",
             4: "Jordan"
         },
         correct: 2,
         next: true
     },
-    {   
+    {
         id: 2,
         capital: "Talinn",
         question: "The above is the capital of which country?",
@@ -158,7 +156,7 @@ const capitalQuestions = [
         correct: 1,
         next: true
     },
-    {   
+    {
         id: 3,
         capital: "Lisbon",
         question: "The above is the capital of which country?",
@@ -215,53 +213,56 @@ const capitalQuestions = [
         capital: "Tel-Aviv",
         question: "The above is the capital of which country?",
         answer: {
-                1: "Madagascar",
-                2: "Croatia",
-                3: "Palestine",
-                4: "Israel"
-            },
+            1: "Madagascar",
+            2: "Croatia",
+            3: "Palestine",
+            4: "Israel"
+        },
         correct: 4,
         next: true
-        },
+    },
     {
         id: 8,
         capital: "Cardiff",
         question: "The above is the capital of which country?",
         answer: {
-                    1: "Ireland",
-                    2: "Wales",
-                    3: "Scotland",
-                    4: "Canada"
-                },
+            1: "Ireland",
+            2: "Wales",
+            3: "Scotland",
+            4: "Canada"
+        },
         correct: 2,
         next: true
-            },
+    },
     {
         id: 9,
         capital: "Wellington",
         question: "The above is the capital of which country?",
         answer: {
-                    1: "New Zealand",
-                    2: "Australia",
-                    3: "Cook Islands",
-                    4: "South Africa"
-                    },
+            1: "New Zealand",
+            2: "Australia",
+            3: "Cook Islands",
+            4: "South Africa"
+        },
         correct: 1,
         next: true
-            },
+    },
     {
         id: 10,
         capital: "Antananarivo",
         question: "The above is the capital of which country?",
         answer: {
-                    1: "Madagascar",
-                    2: "Chad",
-                    3: "Mali",
-                    4: "Bolivia"
-                    },
+            1: "Madagascar",
+            2: "Chad",
+            3: "Mali",
+            4: "Bolivia"
+        },
         correct: 1,
         next: false
     },
 ];
 
-export {questions, capitalQuestions};
+export {
+    questions,
+    capitalQuestions
+};
