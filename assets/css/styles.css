@@ -230,10 +230,10 @@ button a {
 }
 
 .nav-open {
-    display: block;
+    transform: translateY(0);
 }
 
-.toggle {
+#toggle {
     margin: 20px;
 }
 
@@ -245,7 +245,7 @@ button:hover {
     background-color: #85baa1ff;
 }
 
-.toggle {
+#toggle {
     display: none;
 }
 
@@ -334,11 +334,11 @@ button:hover {
         font-size: 15px;
     }
 
-    .toggle {
+    #toggle {
         display: block;
         position: fixed;
-        top: 0;
-        right: 0;
+        top: 1rem;
+        right: 1rem;
         width: 100px;
     }
 
@@ -357,6 +357,21 @@ button:hover {
     #leaderboard td {
         width: 100px;
 
+    }
+
+    .menu {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: black;
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
     }
 }
 
