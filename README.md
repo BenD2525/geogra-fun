@@ -163,6 +163,7 @@ The live link can be found here - []()
 All media taken from other websites is listed below:
 
 - Favicon was taken from [Icons8](https://icons8.com/icons/set/favicon)
+- Social media icons were taken from [Font Awesome](https://fontawesome.com/kits/cdefc89d16/use)
 - Flag images were taken from [Country Flags](https://www.countryflags.com/image-overview/)
 - Earth image was taken from [Unspash](https://unsplash.com/photos/vhSz50AaFAs)
 - Background image was taken from [Unsplash](https://unsplash.com/photos/Ef6iL87-vOA)
