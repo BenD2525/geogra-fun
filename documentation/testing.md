@@ -48,11 +48,11 @@ The site has been checked using Google Lighthouse, with a score of 100 for acces
 
 ## HTML
 No errors were returned when passing through the official W3C validator
-![Index HTML Screenshot](documentation/index_html_check.PNG)
-![Leaderboard HTML Screenshot](documentation/leaderboard_html_check.PNG)
-![Learn More HTML Screenshot](documentation/learn_more_html_check.PNG)
-![Flags HTML Screenshot](documentation/flags_html_check.PNG)
-![Capitals HTML Screenshot](documentation/capitals_html_check.PNG)
+![Index HTML Screenshot](index_html_check.PNG)
+![Leaderboard HTML Screenshot](leaderboard_html_check.PNG)
+![Learn More HTML Screenshot](learn_more_html_check.PNG)
+![Flags HTML Screenshot](flags_html_check.PNG)
+![Capitals HTML Screenshot](capitals_html_check.PNG)
 
 ## CSS
 No errors were found when passing through the official (Jigsaw) validator
