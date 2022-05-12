@@ -60,6 +60,7 @@ footer {
     grid-template-rows: 40% 40% 20%;
     background-color: #040f16ff;
     color: white;
+    width: 100vw;
 }
 
 .socials {
@@ -299,8 +300,8 @@ button:hover {
 #toggle {
     display: block;
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 5%;
+    right: 8%;
     width: 100px;
     margin: 20px;
     z-index: 100;
@@ -326,6 +327,10 @@ button:hover {
 
 .nav-close {
     display: none;
+}
+
+.copyright {
+    bottom: 1%;
 }
 
 /*Medium Screen Media Queries*/
@@ -404,6 +409,7 @@ button:hover {
 
     .button-box {
         background-color: black;
+        width: 100vw;
     }
 
     .answer {
@@ -417,7 +423,7 @@ button:hover {
     }
 
     .title-section {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     #time-section {
@@ -459,6 +465,9 @@ button:hover {
     #toggle {
         font-size: 20px;
         width: fit-content;
+        right: 10%;
+        top: 0;
+        right: 10%;
     }
 
     .leaderboard h4 {
@@ -489,9 +498,22 @@ button:hover {
     .socials ul {
         display: grid;
         grid-template-columns: 50% 50%;
+        width: 50vw;
     }
 
     h4 {
         padding-top: 50px;
+    }
+
+    .button-box button {
+        width: 40vw
+    }
+
+    .socials h3 {
+        width: 100vw;
+    }
+
+    .socials {
+        width: 50vw;
     }
 }
